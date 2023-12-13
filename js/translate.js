@@ -51,7 +51,7 @@ function TranslateInit(config) {
             attr === 'en' ? 'English' :
                 attr === 'fr' ? 'France' : ''
 
-        document.querySelector('.bs-c-site-sidebar__list-icon--active').setAttribute('src', `/images/img/${attr}.png`)
+        document.querySelector('.bs-c-site-sidebar__list-icon--active').setAttribute('src', `../images/img/${attr}.png`)
         document.querySelectorAll("[data-google-lang]").forEach(item => {
             if (item.dataset.googleLang === attr) {
                 item.style.display = 'none'
@@ -112,7 +112,7 @@ function TranslateCookieHandler(val, domain, attr) {
         document.querySelector('.bs-c-site-sidebar__list-text--active-lang').textContent =
             attr === 'en' ? 'English' :
                 attr === 'fr' ? 'France' : ''
-        document.querySelector('.bs-c-site-sidebar__list-icon--active').setAttribute('src', `/images/img/${attr}.png`)
+        document.querySelector('.bs-c-site-sidebar__list-icon--active').setAttribute('src', `../images/img/${attr}.png`)
         document.querySelectorAll("[data-google-lang]").forEach(item => {
             if (item.dataset.googleLang === attr) {
                 item.style.display = 'none'

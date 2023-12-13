@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Inter';
-    src: url("/css/fonts/Inter.ttf");
+    src: url("../css/fonts/Inter.ttf");
 }
 
 * {
@@ -1685,7 +1685,7 @@ strong {
 }
 
 .about-us .promo-banner.is-about-us {
-    background: url("/images/img/banner-about-us.jpg") 50%/cover no-repeat;
+    background: url("../images/img/banner-about-us.jpg") 50%/cover no-repeat;
     width: 100%;
     height: 500px;
     display: flex;
@@ -1723,24 +1723,24 @@ strong {
 }
 
 .about-us-badges__item:nth-child(1):before {
-    content: url("/images/img/badge-char-about-us-1.png");
+    content: url("../images/img/badge-char-about-us-1.png");
     left: -72px;
 }
 
 .about-us-badges__item:nth-child(2):before {
-    content: url("/images/img/badge-char-about-us-2.png");
+    content: url("../images/img/badge-char-about-us-2.png");
     left: -23px;
     top: -55px;
 }
 
 .about-us-badges__item:nth-of-type(3):before {
-    content: url("/images/img/badge-char-about-us-3.png");
+    content: url("../images/img/badge-char-about-us-3.png");
     right: -108px;
     top: 83px;
 }
 
 .about-us-badges__item:nth-child(4):before {
-    content: url("/images/img/badge-char-about-us-4.png");
+    content: url("../images/img/badge-char-about-us-4.png");
     right: -160px;
     top: -16px;
 }
@@ -1754,7 +1754,7 @@ strong {
     justify-content: space-between;
     align-content: stretch;
     padding: 30px 45px 230px;
-    background: #fff url("/images/img/diamonds-abous-us.png") 0 100% no-repeat;
+    background: #fff url("../images/img/diamonds-abous-us.png") 0 100% no-repeat;
 }
 
 .about-us__column {
@@ -2256,8 +2256,8 @@ samp {
     mask-size: 18px 18px;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-image: url("/images/arrow-right.svg");
-    mask-image: url("/images/arrow-right.svg");
+    -webkit-mask-image: url("../images/arrow-right.svg");
+    mask-image: url("../images/arrow-right.svg");
     transition: all .3s;
 }
 
@@ -2294,8 +2294,8 @@ samp {
 }
 
 .faq .faq__accordion-header .b-iconm_menuabout:before {
-    -webkit-mask-image: url("/images/star.svg");
-    mask-image: url("/images/star.svg");
+    -webkit-mask-image: url("../images/star.svg");
+    mask-image: url("../images/star.svg");
 }
 
 .faq .faq__accordion-body {
@@ -2354,38 +2354,38 @@ samp {
 }
 
 .faq .faq__accordion-header .b-iconmyaccountrobot-1:before {
-    -webkit-mask-image: url("/images/robot.svg");
-    mask-image: url("/images/robot.svg");
+    -webkit-mask-image: url("../images/robot.svg");
+    mask-image: url("../images/robot.svg");
 }
 
 .faq .faq__accordion-header .b-icon-help_payments:before {
-    -webkit-mask-image: url("/images/faq-help-payments.svg");
-    mask-image: url("/images/faq-help-payments.svg");
+    -webkit-mask-image: url("../images/faq-help-payments.svg");
+    mask-image: url("../images/faq-help-payments.svg");
 }
 
 .faq .faq__accordion-header .b-icon_zrofees:before {
-    -webkit-mask-image: url("/images/faq-signup-bonus.svg");
-    mask-image: url("/images/faq-signup-bonus.svg");
+    -webkit-mask-image: url("../images/faq-signup-bonus.svg");
+    mask-image: url("../images/faq-signup-bonus.svg");
 }
 
 .faq .faq__accordion-header .b-icon-slots-off:before {
-    -webkit-mask-image: url("/images/faq-slots-off.svg");
-    mask-image: url("/images/faq-slots-off.svg");
+    -webkit-mask-image: url("../images/faq-slots-off.svg");
+    mask-image: url("../images/faq-slots-off.svg");
 }
 
 .faq .faq__accordion-header .b-iconpromotion_password:before {
-    -webkit-mask-image: url("/images/faq-lock.svg");
-    mask-image: url("/images/faq-lock.svg");
+    -webkit-mask-image: url("../images/faq-lock.svg");
+    mask-image: url("../images/faq-lock.svg");
 }
 
 .faq .faq__accordion-header .b-icon_responsible:before {
-    -webkit-mask-image: url("/images/faq-attention.svg");
-    mask-image: url("/images/faq-attention.svg");
+    -webkit-mask-image: url("../images/faq-attention.svg");
+    mask-image: url("../images/faq-attention.svg");
 }
 
 .faq .faq__accordion-header .b-icon_gettingstarted:before {
-    -webkit-mask-image: url("/images/faq-getting-started.svg");
-    mask-image: url("/images/faq-getting-started.svg");
+    -webkit-mask-image: url("../images/faq-getting-started.svg");
+    mask-image: url("../images/faq-getting-started.svg");
 }
 
 @media (max-width: 768px) {
@@ -2537,8 +2537,8 @@ samp {
 }
 
 .popup-plus-icon-card.is-sequre:after {
-    -webkit-mask-image: url("/images/security.svg");
-    mask-image: url("/images/security.svg");
+    -webkit-mask-image: url("../images/security.svg");
+    mask-image: url("../images/security.svg");
 }
 
 .popup-plus-icon-card.is-left:after {
@@ -2562,8 +2562,8 @@ samp {
 }
 
 .popup-plus-icon-card.is-comissions:after {
-    -webkit-mask-image: url("/images/faq-signup-bonus.svg");
-    mask-image: url("/images/faq-signup-bonus.svg");
+    -webkit-mask-image: url("../images/faq-signup-bonus.svg");
+    mask-image: url("../images/faq-signup-bonus.svg");
 }
 
 .popup-plus-icon-card.is-comissions:after,
@@ -2592,8 +2592,8 @@ samp {
     mask-size: 90px 90px;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-image: url("/images/identity.svg");
-    mask-image: url("/images/identity.svg");
+    -webkit-mask-image: url("../images/identity.svg");
+    mask-image: url("../images/identity.svg");
     background-color: #fff;
 }
 
@@ -2608,13 +2608,13 @@ samp {
 }
 
 .popup-plus-icon-card.is-speed:after {
-    -webkit-mask-image: url("/images/international.svg");
-    mask-image: url("/images/international.svg");
+    -webkit-mask-image: url("../images/international.svg");
+    mask-image: url("../images/international.svg");
 }
 
 .popup-plus-icon-card.is-dec:after {
-    -webkit-mask-image: url("/images/bitcoin.svg");
-    mask-image: url("/images/bitcoin.svg");
+    -webkit-mask-image: url("../images/bitcoin.svg");
+    mask-image: url("../images/bitcoin.svg");
 }
 
 .popup-plus-icon-card.is-right:after {
@@ -2642,7 +2642,7 @@ samp {
     top: -8.5px;
     width: 100%;
     height: 9px;
-    background: transparent url("/images/img/about-line.png") 0 0 repeat-x;
+    background: transparent url("../images/img/about-line.png") 0 0 repeat-x;
 }
 
 .about-bitcoin__wrapper {
@@ -2713,8 +2713,8 @@ samp {
 }
 
 .popup-plus-icon-card.is-wallet:after {
-    -webkit-mask-image: url("/images/faq-help-payments.svg");
-    mask-image: url("/images/faq-help-payments.svg");
+    -webkit-mask-image: url("../images/faq-help-payments.svg");
+    mask-image: url("../images/faq-help-payments.svg");
 }
 
 .popup-plus-icon-card.is-coins:after {
@@ -2728,14 +2728,14 @@ samp {
     mask-size: 90px 90px;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-image: url("/images/faq-getting-started.svg");
-    mask-image: url("/images/faq-getting-started.svg");
+    -webkit-mask-image: url("../images/faq-getting-started.svg");
+    mask-image: url("../images/faq-getting-started.svg");
     background-color: #e31351;
 }
 
 .popup-plus-icon-card.is-basket:after {
-    -webkit-mask-image: url("/images/spending.svg");
-    mask-image: url("/images/spending.svg");
+    -webkit-mask-image: url("../images/spending.svg");
+    mask-image: url("../images/spending.svg");
 }
 
 .popup-plus-icon-card.is-outlined.is-right:before {
@@ -3259,15 +3259,15 @@ samp {
 }
 
 .bs-c-tournament-card.is-slot-wars .is-front:before {
-    background-image: url('/images/img/bg.40063a4.jpg');
+    background-image: url('../images/img/bg.40063a4.jpg');
 }
 
 .bs-c-tournament-card.is-table-wars .is-front:before {
-    background-image: url('/images/img/bg.af5f3be.jpg');
+    background-image: url('../images/img/bg.af5f3be.jpg');
 }
 
 .bs-c-tournament-card.is-welcome-freeroll .is-front:before {
-    background-image: url('/images/img/bg.f2c428f.jpg');
+    background-image: url('../images/img/bg.f2c428f.jpg');
 }
 
 .bs-c-tournament-card.is-back.is-slot-wars .promo-card__header {
@@ -3551,7 +3551,7 @@ strong.promo-card__explanation-intro {
 }
 
 .promo-card.is-welcome-package.is-front:before {
-    background-image: url('/images/img/welcome-package-promo-bg.jpg');
+    background-image: url('../images/img/welcome-package-promo-bg.jpg');
 }
 
 .promo-card.is-upcoming-bonus.is-back .promo-card__back-inner,
@@ -4021,7 +4021,7 @@ strong.promo-card__explanation-intro {
 }
 
 .bs-c-page.is-tournament-page.is-slot-wars {
-    background-image: url('/images/img/bg-page.225e4d7.jpg');
+    background-image: url('../images/img/bg-page.225e4d7.jpg');
 }
 
 .bs-tournament {
@@ -4048,7 +4048,7 @@ strong.promo-card__explanation-intro {
 
 .bs-tournament.is-slot-wars {
     background-color: #1b062f;
-    background-image: url('/images/img/bg-mobile.cb9fd5d.jpg');
+    background-image: url('../images/img/bg-mobile.cb9fd5d.jpg');
 }
 
 .bs-c-page .bs-tournament.is-slot-wars {
@@ -6125,7 +6125,7 @@ strong.promo-card__explanation-intro {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("/images/img/welcome-offer-bg.jpg");
+    background: url("../images/img/welcome-offer-bg.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 16px 0 0 16px;
@@ -6692,7 +6692,7 @@ strong.promo-card__explanation-intro {
         height: auto;
         padding: 30px 20px;
         border-radius: 16px;
-        background: url('/images/img/welcome-offer-bg.jpg');
+        background: url('../images/img/welcome-offer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -11235,23 +11235,23 @@ strong.promo-card__explanation-intro {
 }
 
 .social-icons__icon.is-telegram:before {
-    background-image: url("/images/img/telegram-img.png");
+    background-image: url("../images/img/telegram-img.png");
 }
 
 .social-icons__icon.is-facebook:before {
-    background-image: url("/images/img/facebook-img.svg");
+    background-image: url("../images/img/facebook-img.svg");
 }
 
 .social-icons__icon.is-twitter:before {
-    background-image: url("/images/img/twitter-img.svg");
+    background-image: url("../images/img/twitter-img.svg");
 }
 
 .social-icons__icon.is-instagram:before {
-    background-image: url("/images/img/instagram-img.svg");
+    background-image: url("../images/img/instagram-img.svg");
 }
 
 .social-icons__icon.is-vimeo:before {
-    background-image: url("/images/img/vimeo-img.svg");
+    background-image: url("../images/img/vimeo-img.svg");
 }
 
 
@@ -11957,7 +11957,7 @@ strong.promo-card__explanation-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("/images/img/bonuses-bg.jpg") 50%/cover no-repeat;
+    background: url("../images/img/bonuses-bg.jpg") 50%/cover no-repeat;
     padding: 100px 0 120px;
     margin-bottom: 60px;
 }
@@ -12138,7 +12138,7 @@ strong.promo-card__explanation-intro {
     font-size: 12px;
     font-weight: 500;
     color: #fff;
-    background: url("/images/img/lets-start-bg.jpg") 50%/cover no-repeat;
+    background: url("../images/img/lets-start-bg.jpg") 50%/cover no-repeat;
     padding: 60px 0;
 }
 
