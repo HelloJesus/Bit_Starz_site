@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <title>Title</title>
+    <script src="/js/lib/jquery-3.6.4.min.js"></script>
+    <script src="/js/lib/swiper-bundle.min.js"></script>
+    <script src="/js/lib/lazyload.min.js"></script>
+    <script src="/js/lib/js.cookie.min.js"></script>
+    <script src="/js/translate.js"></script>
+</head>
+
+<body>
+    <div id="basis" class="bs-site-wrap lang-en os-win is-chrome is-desktop is-logged-out-user">
+        <div class="header-wrapper" id="header-wrapper">
+            <header class="header-navbar navbar" id="header">
+                <button class="navbar__menu header-navbar__menu">
+                    <span class="navbar__menu-span"></span>
+                </button>
+                <a href="index.html" class="navbar__logo">
+                    <picture class="navbar__logo-img">
+                        <source media="(max-width: 477px)" srcset="/images/nav-logo-mobile.svg">
+                        <source media="(min-width: 478px)" srcset="/images/nav-logo-desktop.svg">
+                        <img src="/images/nav-logo-desktop.svg" alt="logo">
+                    </picture>
+                </a>
+                <section class="c-games-search navbar__search is-trending-games">
+                    <button class="c-button navbar__search-btn search--icon-mobile has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon navbar__search-icon icon sprite-icons" viewBox="0 0 50 50">
+                            <path
+                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
+                        </svg>
+                    </button>
+                    <div class="c-search-content navbar__search-content">
+                        <svg class="c-button__icon navbar__search-icon icon sprite-icons" viewBox="0 0 50 50">
+                            <path
+                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
+                        </svg>
+                        <input id="gameSearchInput" placeholder="Find game or game studio (try roulette, book...)"
+                            value="" class="c-search-input">
+                    </div>
+                </section>
+                <button class=" navbar__login login-btn c-button color-dark-purple size-m">
+                    <span>Log in</span>
+                </button>
+                <button class="c-button navbar__signup size-m">
+                    <strong>Sign up</strong>
+                </button>
+            </header>
+            <div class="bs-c-site-sidebar">
+                <div class="mobile-menu-header mobile-menu-header--sublist has-title">
+                    <button
+                        class="c-button mobile-menu-header__button mobile-menu-header__button--back is-back has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                            id="i-arrow-left" viewBox="0 0 16 16">
+                            <path
+                                d="M7.293 15.707a1 1 0 001.414-1.414L3.414 9H15a1 1 0 100-2H3.414l5.293-5.293A1 1 0 007.293.293l-7 7a.997.997 0 000 1.416m7 6.998l-7-7z" />
+                        </svg>
+                    </button>
+                    <span class="mobile-menu-header__title">More</span>
+                    <button
+                        class="c-button mobile-menu-header__button mobile-menu-header__button--close is-close has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                            id="i-icon-close" viewBox="0 0 16 16">
+                            <path
+                                d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mobile-menu-header mobile-menu-header--list">
+                    <img src="/images/bitstarz-logo-mobile-side.svg" alt="Bitstarz logo"
+                        class="mob-sidenav-header__logo">
+                    <button
+                        class="c-button mobile-menu-header__button mobile-menu-header__button--close is-close has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                            id="i-icon-close" viewBox="0 0 16 16">
+                            <path
+                                d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="bs-c-site-sidebar__wrap is-tesla-widget-visible">
+                    <ul class="bs-c-site-sidebar__sublist-header bs-c-site-sidebar__sublist--mobile-table">
+
+                    </ul>
+                    <ul class="bs-c-site-sidebar__list">
+                        <li class="bs-c-site-sidebar__list-item ">
+                            <a href="/pages/index.html" class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+                                    <path
+                                        d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-sidebar"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-games" viewBox="0 0 20 26">
+                                    <path
+                                        d="M10.984 0a1 1 0 00-.865.527c-.143.228-.603.73-1.207 1.373-.62.659-1.38 1.494-2.111 2.559C5.337 6.589 4 9.654 4 14.014a1 1 0 102 0c0-3.959 1.163-6.552 2.45-8.422.537-.783 1.092-1.415 1.612-1.98.061.397.191.984.416 1.63 1.087 5.126 3.668 9.291 3.668 9.291a1.001 1.001 0 101.708-1.039s-1.064-1.806-2.075-4.377a8.922 8.922 0 003.164.895l.057.002a1 1 0 00.998-1.057c-.006-.119-.187-2.945-2.092-4.85-1.232-1.232-2.84-1.738-3.861-1.947-.027-.36-.041-.718-.043-1.076a1 1 0 00-.975-1.082.999.999 0 00-.043-.002zM3 16.014c-1.799 0-3 2.235-3 4a5 5 0 0010 0c0-1.765-1.201-4-3-4-.607 0-1.07.508-2 .508s-1.41-.508-2-.508zm10 0c-.696 0-1.3.338-1.781.851.503.965.781 2.07.781 3.149a6.95 6.95 0 01-.793 3.224c.917 1.078 2.267 1.776 3.793 1.776a5 5 0 005-5c0-1.765-1.201-4-3-4-.607 0-1.07.508-2 .508s-1.41-.508-2-.508z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    Games
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/slots.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-slots" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path d="M0 2a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H2a2 2 0 01-2-2z"
+                                                fill="#ffd22f" />
+                                            <g fill="#ad6006">
+                                                <rect height="3" rx="1" width="8" x="3" y="12" />
+                                                <rect height="7" rx="1" width="10" x="2" y="2" />
+                                                <path clip-rule="evenodd"
+                                                    d="M18 3.5a1.5 1.5 0 01-1 1.415V10a1 1 0 01-1 1h-.5a.5.5 0 010-1h.5V4.915A1.5 1.5 0 1118 3.5z"
+                                                    fill-rule="evenodd" />
+                                            </g>
+                                            <g fill="#ffd22f">
+                                                <rect height="3" rx="1" width="2" x="3" y="4" />
+                                                <rect height="3" rx="1" width="2" x="6" y="4" />
+                                                <rect height="3" rx="1" width="2" x="9" y="4" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Slots</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-table-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path
+                                                d="M10.835.258l4.966 1.33a2 2 0 011.414 2.45l-3.106 11.59a2 2 0 01-2.45 1.415l-4.966-1.33 3.189-7.437a2 2 0 00.15-.574z"
+                                                fill="#ad6006" />
+                                            <path d="M0 2a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M6.4 5.13a.68.68 0 00-.804.003c-.977.724-3.322 2.672-2.375 4.07.143.211.353.373.589.48.634.291 1.259.193 1.704-.124l-.509.849c-.158.264.042.592.361.592h1.268c.32 0 .52-.328.36-.592l-.509-.85c.407.29.962.397 1.537.193.24-.085.458-.224.626-.408C9.92 7.957 7.414 5.88 6.4 5.13z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Table Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bitstarz-originals"
+                                            fill="none" viewBox="0 0 18 18">
+                                            <circle cx="9" cy="9" fill="#ffd22f" r="9" />
+                                            <path clip-rule="evenodd"
+                                                d="M6.916 7.257s.47-.033.635-.299c.164-.265 1.073-2.287 1.073-2.287s.36-.358.724-.038c.291.258 1.092 2.26 1.092 2.26s.141.32.517.353c.376.033 2.608.266 2.608.266s.626.247.376.653c-.121.197-2.067 1.86-2.067 1.86s-.236.31-.165.542c.07.233.552 2.203.552 2.203s.036.399-.14.576c-.177.177-.283.188-.553.1-.27-.089-2.314-1.307-2.314-1.307s-.235-.1-.447.011c-.21.111-2.208 1.23-2.208 1.23s-.717.398-.87-.278c-.023-.52.494-2.048.494-2.048s.212-.686-.106-.996C5.8 9.748 4.18 8.33 4.18 8.33s-.446-.465.07-.753c.53-.177 2.667-.32 2.667-.32z"
+                                                fill="#ad6006" fill-rule="evenodd" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">BitStarz Originals</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-livespin" viewBox="0 0 18 18"
+                                            fill="none">
+                                            <g clip-path="url(#clip0_1705_57)">
+                                                <circle cx="9" cy="9" r="9" fill="#A36424" />
+                                                <path
+                                                    d="M9 18a9 9 0 009-9 9 9 0 00-9-9 9 9 0 00-9 9 9 9 0 009 9zM7.312 5.062a1.688 1.688 0 013.375 0V9a1.688 1.688 0 01-3.374 0V5.062zm-2.25 2.813c.31 0 .563.253.563.563V9a3.376 3.376 0 006.75 0v-.563c0-.309.253-.562.563-.562.309 0 .562.253.562.563V9a4.502 4.502 0 01-3.938 4.465v.598c0 .309-.253.562-.562.562a.564.564 0 01-.563-.563v-.597A4.502 4.502 0 014.5 9v-.563c0-.309.253-.562.563-.562z"
+                                                    fill="#F8D454" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Bet Along Streamers</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-jackpots" fill="none"
+                                            viewBox="0 0 18 14">
+                                            <path
+                                                d="M0 4C0 2.114 0 1.172.586.586 1.172 0 2.114 0 4 0h10c1.886 0 2.828 0 3.414.586C18 1.172 18 2.114 18 4v6c0 1.886 0 2.828-.586 3.414S15.886 14 14 14H4c-1.886 0-2.828 0-3.414-.586C0 12.828 0 11.886 0 10z"
+                                                fill="#ffd22f" />
+                                            <g fill="#ad6006">
+                                                <path
+                                                    d="M2.808 9.032a.685.685 0 101.248.565l1.855-4.1A1 1 0 006 5.085V5a1 1 0 00-1-1H2.65a.65.65 0 000 1.3h1.805a.029.029 0 01.027.042zM7.808 9.032a.685.685 0 101.248.565l1.855-4.1A1 1 0 0011 5.085V5a1 1 0 00-1-1H7.65a.65.65 0 000 1.3h1.805a.029.029 0 01.027.042zM12.808 9.032a.685.685 0 101.248.565l1.855-4.1A1 1 0 0016 5.085V5a1 1 0 00-1-1h-2.35a.65.65 0 100 1.3h1.805a.029.029 0 01.027.042z" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Jackpots</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-live-casino" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <circle cx="9" cy="9" fill="#ffd22f" r="9" />
+                                            <g fill="#ad6006">
+                                                <path
+                                                    d="M9 4a1 1 0 100-2 1 1 0 000 2zM15 10a1 1 0 100-2 1 1 0 000 2zM4 9a1 1 0 11-2 0 1 1 0 012 0zM9 16a1 1 0 100-2 1 1 0 000 2zM12.536 5.464A1 1 0 1013.95 4.05a1 1 0 00-1.414 1.414zM12.536 13.95a1 1 0 101.414-1.415 1 1 0 00-1.414 1.415zM5.464 5.464A1 1 0 114.05 4.05a1 1 0 011.414 1.414zM4.05 13.95a1 1 0 101.414-1.415A1 1 0 004.05 13.95zM9.273 6.079C9.193 6.033 9.103 6 9 6s-.194.033-.273.079l-.024.005C7.816 6.703 6 8.238 6 9.214c0 .829.783 1.5 1.75 1.5.404 0 .77-.122 1.065-.319-.257.588-.662.95-1.159 1.192-.091.032-.156.109-.156.199 0 .118.112.214.25.214h2.5c.138 0 .25-.096.25-.214 0-.09-.065-.167-.156-.199-.497-.242-.902-.604-1.16-1.192.296.197.663.32 1.066.32.967 0 1.75-.672 1.75-1.5 0-.977-1.816-2.512-2.703-3.131z" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Live Casino</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bitcoin-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <circle cx="9" cy="9" fill="#ffd22f" r="9" />
+                                            <path
+                                                d="M12.98 7.824c.166-1.26-.682-1.939-1.84-2.39l.376-1.709-.918-.259-.366 1.663a34.683 34.683 0 00-.735-.196l.369-1.674L8.949 3l-.376 1.707c-.2-.051-.396-.102-.586-.156v-.005l-1.264-.358-.244 1.11s.68.177.666.188c.372.105.439.384.427.605l-.428 1.946a.698.698 0 01.096.034l-.097-.027-.6 2.726c-.046.128-.16.32-.42.247.009.015-.668-.189-.668-.189L5 12.018l1.194.338c.222.063.44.129.654.191l-.38 1.728.917.259.376-1.71c.25.078.493.149.731.216l-.375 1.7.918.26.38-1.724c1.564.335 2.74.2 3.236-1.404.399-1.29-.02-2.036-.843-2.521.6-.157 1.05-.604 1.171-1.527zm-2.097 3.331c-.284 1.292-2.202.594-2.824.419l.504-2.29c.622.177 2.616.525 2.32 1.871zm.284-3.35c-.26 1.175-1.856.578-2.374.432l.457-2.076c.518.146 2.186.42 1.917 1.645z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Bitcoin Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-top-games" fill="none"
+                                            viewBox="0 0 18 15">
+                                            <path
+                                                d="M10.826 0a1.25 1.25 0 00-.859.342L5.474 4.629A1.51 1.51 0 005 5.72v7.731C5 14.309 5.727 15 6.625 15h7.306c.65 0 1.237-.368 1.493-.937l2.444-5.418c.087-.192.132-.4.132-.61V6.489c0-.855-.727-1.547-1.625-1.547h-5.16l.807-3.532c.09-.39-.038-.797-.336-1.076a1.248 1.248 0 00-.86-.334z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M0 5.833C0 5.373.336 5 .75 5h1.5c.414 0 .75.373.75.833v8.334c0 .46-.336.833-.75.833H.75c-.414 0-.75-.373-.75-.833z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Top Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-st-patricks-games"
+                                            viewBox="0 0 18 18" fill="none">
+                                            <g clip-path="url(#clip0_1802_7)">
+                                                <path
+                                                    d="M9.092 0c-.84-.015-1.65.627-1.884 1.557-.3 1.19.302 3.81.626 5.06-.95-.875-2.977-2.644-4.17-2.943-1.065-.268-2.153.307-2.394 1.26a1.67 1.67 0 00.111 1.126c.132.29.06.611-.19.808-.306.241-.55.568-.643.933-.24.956.447 1.974 1.512 2.242 1.194.3 3.816-.302 5.067-.626-.877.948-2.648 2.973-2.948 4.164-.267 1.063.307 2.148 1.264 2.388.367.092.77.032 1.127-.123a.66.66 0 01.803.213c.222.293.53.527.941.63.958.24 1.977-.446 2.245-1.508.3-1.191-.302-3.811-.626-5.06.949.875 2.977 2.644 4.17 2.942 1.065.267 2.153-.306 2.394-1.26.092-.366.03-.77-.125-1.125a.657.657 0 01.215-.802 1.67 1.67 0 00.63-.939c.241-.955-.445-1.975-1.51-2.242-1.194-.3-3.818.301-5.068.625.876-.948 2.648-2.971 2.947-4.162.268-1.063-.306-2.15-1.263-2.39a1.683 1.683 0 00-1.127.111.66.66 0 01-.809-.19c-.24-.305-.568-.549-.934-.64A1.602 1.602 0 009.092 0zm2.893 13.546c.039.444.045.838.025 1.188 1 1.248 2.144 2.408 3.357 3.163a.692.692 0 10.73-1.176c-.927-.577-1.82-1.446-2.639-2.413-.43-.151-.92-.403-1.473-.762z"
+                                                    fill="#FFD25E" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Paddy's Picks</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-trending-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path d="M18 9A9 9 0 100 9a9 9 0 0018 0z" fill="#ffd22f" />
+                                            <path
+                                                d="M8.1 12.6V7.573L6.673 9A.9.9 0 015.4 7.727l2.964-2.963a.9.9 0 011.272 0L12.6 7.727A.9.9 0 0111.327 9L9.9 7.573V12.6a.9.9 0 01-1.8 0z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Trending Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-new-games" fill="none"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M18.34.008a1.825 1.825 0 00-.42.01C15.632.337 10.717 1.045 5.682 7H3.6c-.347 0-.68.142-.92.392L.38 9.785A1.293 1.293 0 00.1 11.2c.2.487.672.8 1.199.8h2.459c-.332.375-.506.773-.692 1.225-.206.501-.387 1.054-.543 1.577-.31 1.046-.517 1.982-.517 1.982a1 1 0 001.193 1.193s.937-.206 1.983-.517a16.813 16.813 0 001.576-.543c.452-.186.85-.36 1.224-.692v2.46c0 .526.314.999.801 1.199.165.069.337.1.506.1.331 0 .651-.123.875-.348l2.4-2.188c.266-.242.418-.584.418-.943V14.3c5.952-5.035 6.661-9.951 6.983-12.239a1.797 1.797 0 00-.512-1.53A1.803 1.803 0 0018.34.007zM5.623 12.945l1.414 1.414-.348.348c.018-.018-.293.195-.693.36-.4.164-.902.33-1.385.474-.12.036-.114.028-.23.06.033-.116.024-.11.06-.23.144-.483.31-.985.475-1.385.164-.4.377-.711.36-.693z"
+                                                fill="#ffd22f" />
+                                            <g fill="#ad6006">
+                                                <path
+                                                    d="M15.982 5.5a1.5 1.5 0 10-3 .001 1.5 1.5 0 003-.001zM11.982 9.5a1.5 1.5 0 10-3 .001 1.5 1.5 0 003-.001z" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">New Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-hot-games" fill="none"
+                                            viewBox="0 0 14 18">
+                                            <path
+                                                d="M13.995 11.253c-.02-2.238-1.26-4.425-2.168-6.025-.2-.356-.39-.687-.548-.992l-.328-.628c-.203-.321-.437-.372-.72-.002 0 0-.47.587-.768.997C8.386 2.582 7.834 1.017 7.827.997L7.6.345C7.445-.06 7.201-.11 6.864.207L6.38.67C6.118.92 0 6.825 0 11.305 0 14.996 3.14 18 6.997 18c3.859 0 6.998-3.003 6.998-6.695v-.003-.038l.005-.007z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M4.375 13.691c.066-1.937 1.643-3.849 2.319-4.583a.239.239 0 01.403.099c.645 2.235 2.631 2.993 2.524 4.609-.095 1.447-1.275 2.612-2.823 2.504-1.385-.098-2.467-1.3-2.423-2.629z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Hot Games - 24h</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-cold-games" fill="none"
+                                            viewBox="0 0 14 18">
+                                            <path
+                                                d="M7.659.288a.897.897 0 00-1.318 0C4.6 2.2 0 7.592 0 11.26 0 15.015 3.1 18 7 18s7-2.985 7-6.74C14 7.592 9.401 2.2 7.659.288z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M10.382 13.621a.894.894 0 01-1.2.293l-1.307-.75v1.466c0 .465-.392.842-.875.842s-.875-.377-.875-.842v-1.465l-1.307.75a.894.894 0 01-1.2-.293.826.826 0 01.304-1.156l1.368-.785-1.368-.785a.825.825 0 01-.304-1.155.895.895 0 011.2-.294l1.307.75V8.732c0-.465.392-.842.875-.842s.875.377.875.842v1.465l1.307-.75c.415-.238.952-.107 1.2.293s.111.917-.304 1.156l-1.368.785 1.368.785a.825.825 0 01.304 1.155z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Cold Games - 24h</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-megaways-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path
+                                                d="M9 0c-.796 0-1.504.335-1.999.857h-1.6c-.614 0-1.048.574-.854 1.128l.401 1.15a.452.452 0 00.43.294h7.245a.45.45 0 00.427-.293l.402-1.15c.196-.555-.24-1.129-.854-1.129h-1.6A2.742 2.742 0 009 0zM5.4 5.143S0 7.726 0 13.714c0 .716.093 1.352.267 1.916C.71 17.056 2.135 18 3.697 18h10.606c1.562 0 2.988-.944 3.43-2.37A6.45 6.45 0 0018 13.713c0-5.987-5.4-8.571-5.4-8.571z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M9.293 6.5h-.005a.402.402 0 00-.411.392v.725C8.599 7.65 7.04 7.93 7.04 9.72c0 2.613 2.84 1.84 2.84 3.583 0 .872-.592.894-.713.894-.092 0-.609.038-.779-.722-.074-.33-.394-.56-.749-.56h-.001c-.494 0-.87.442-.747.898.382 1.416 1.653 1.55 1.87 1.579v.648c0 .216.184.391.411.391s.412-.175.412-.391v-.648c.278-.034 1.847-.279 1.847-2.1 0-2.507-2.839-2.028-2.839-3.565 0-.881.449-.908.619-.908.172 0 .497.105.626.677.075.331.39.565.747.565.498 0 .873-.45.743-.909a2.05 2.05 0 00-1.622-1.515v-.746a.402.402 0 00-.412-.392z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Megaways</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden is-buy-bonus-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus" viewBox="0 0 12 12">
+                                            <path
+                                                d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Buy Bonus Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-classic-slots-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-classic-slots-games"
+                                            fill="none" viewBox="0 0 24 26">
+                                            <path
+                                                d="M17 4.34a1.5 1.5 0 00-2.049.549l-.348.602a5.997 5.997 0 00-6.799 2.777l-2.5 4.33 10.392 6 2.5-4.33a5.998 5.998 0 00-.995-7.277l.348-.602A1.5 1.5 0 0017 4.339zM3.438 13.83a1.002 1.002 0 00-1.476 1.125 1 1 0 00.476.607L7 18.197a2 2 0 00-.933 2.249 2 2 0 003.664.482 2 2 0 00.265-1.001l4.565 2.635a.998.998 0 001.379-.359 1 1 0 00-.379-1.373z"
+                                                fill="#ffd22f" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Classic Slots</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-book-of-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-book-of-games" fill="none"
+                                            viewBox="0 0 20 17">
+                                            <path
+                                                d="M14 0a3 3 0 00-3 3v10a1 1 0 01-2 0V3a3 3 0 00-3-3H1a1 1 0 00-1 1v13a2 2 0 002 2h6.277c.346.595.984 1 1.723 1s1.376-.405 1.723-1H18a2 2 0 002-2V1a1 1 0 00-1-1z"
+                                                fill="#ffd22f" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">"Book Of" Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-provably-fair-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-provably-fair-games"
+                                            fill="none" viewBox="0 0 18 22">
+                                            <path
+                                                d="M8.188.172l-7 3.112A1.999 1.999 0 000 5.112v4.7c0 7.83 6.439 11.486 9 12 2.561-.514 9-4.17 9-12v-4.7a2 2 0 00-1.188-1.828l-7-3.111a1.997 1.997 0 00-1.624 0z"
+                                                fill="#ffd22f" />
+                                            <path clip-rule="evenodd"
+                                                d="M14.607 7.536a1 1 0 00-1.415 0l-4.95 4.95-2.12-2.122a1 1 0 10-1.415 1.414l2.829 2.829a1 1 0 001.414 0l.707-.708 4.95-4.95a1 1 0 000-1.413z"
+                                                fill="#ad6006" fill-rule="evenodd" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Provably Fair Games</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-promotions" viewBox="0 0 24 26">
+                                    <path
+                                        d="M14.5 0a3.5 3.5 0 00-2.857 1.5A2.967 2.967 0 0010 1C8.355 1 7 2.355 7 4c0 .352.074.685.188 1H2a2 2 0 00-2 2v2h24V7a2 2 0 00-2-2h-4.356A3.44 3.44 0 0018 3.5C18 1.579 16.421 0 14.5 0zm0 2c.84 0 1.5.66 1.5 1.5S15.34 5 14.5 5H13V3.5c0-.84.66-1.5 1.5-1.5zM10 3c.565 0 1 .435 1 1v1h-1c-.565 0-1-.435-1-1s.435-1 1-1zm-9 8v13a2 2 0 002 2h18a2 2 0 002-2V11zm8.777 3c.913 0 1.717.447 2.223 1.127A2.766 2.766 0 0114.223 14 2.777 2.777 0 0117 16.777c0 2.238-3.247 5.036-4.508 6.04a.786.786 0 01-.984 0C10.247 21.812 7 19.014 7 16.776A2.777 2.777 0 019.777 14z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    Promotions
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/promotions.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus" viewBox="0 0 12 12">
+                                            <path
+                                                d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Welcome Package</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/slotwars.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                            viewBox="0 0 14 12">
+                                            <path
+                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Slot Wars</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                            viewBox="0 0 14 12">
+                                            <path
+                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Table game</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                            viewBox="0 0 14 12">
+                                            <path
+                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Welcome Freeroll</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item">
+                            <a href="/pages/vip.html" class="bs-c-site-sidebar__list-link ">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-sidebar"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-vip" viewBox="0 0 26 20">
+                                    <path
+                                        d="M2 0a2 2 0 00-2 2v16a2 2 0 002 2h22a2 2 0 002-2V2a2 2 0 00-2-2zm.67 6h2.334l1.535 5.889h.106l1.49-5.89h2.195l-2.512 8H5.246zm9.312 0h2.036v8h-2.036zM16 6h3.504c1.719 0 2.883 1.12 2.883 2.84 0 1.702-1.225 2.814-3.004 2.814h-1.348V14H16zm2.035 1.562v2.557h.92c.865 0 1.375-.444 1.375-1.275 0-.843-.504-1.282-1.363-1.282z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">VIP</span>
+                            </a>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul open">
+                            <div class="bs-c-site-sidebar__list-link is-active">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-help-center" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.5a1.5 1.5 0 11.001-3.001 1.5 1.5 0 01-.001 3zm2.068-7C13.406 13.11 13 13.512 13 14h-2c0-1.39.949-2.265 1.711-2.97C13.51 10.292 14 9.799 14 9c0-1.103-.897-2-2-2s-2 .897-2 2H8c0-2.206 1.794-4 4-4s4 1.794 4 4c0 1.715-1.071 2.704-1.932 3.5z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    Help
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist  ">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/faq.html" class="bs-c-site-sidebar__sublist-link active">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">FAQ</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/about-bitcoin.html" class="bs-c-site-sidebar__sublist-link ">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">About Bitcoin</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/btc-to-eur-exchanger.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Instant BTC to EUR exchanger</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/provability-explained.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Provability Explained</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/play-safe.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Play Safe</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/complaints.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Complaints</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/how-to-buy-crypto-at-bitstarz.html"
+                                        class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">How to buy Crypto</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-more" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 14A2 2 0 1111.999 10 2 2 0 0112 14zm7 0A2 2 0 1118.999 10 2 2 0 0119 14zM5 14A2 2 0 114.999 10 2 2 0 015 14z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    More
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/about-us.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">About Us</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/terms.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Terms & Conditions</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/bonus-terms-and-conditions.html"
+                                        class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Bonus Terms & Conditions</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/payments.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Payments</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/privacy-policy.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Privacy Policy</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <img src=""
+                                    class="c-flag-icon bs-c-site-sidebar__list-icon bs-c-site-sidebar__list-icon--active">
+                                <span class="bs-c-site-sidebar__list-text bs-c-site-sidebar__list-text--active-lang">
+                                    <!-- English -->
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li translate="no" class="bs-c-site-sidebar__sublist-item bs-c-site-sidebar__sublist-text--active-lang"
+                                    data-google-lang="en">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <img src="/images/img/en.png" class="c-flag-icon bs-c-site-sidebar__list-icon">
+                                        <span class="bs-c-site-sidebar__list-text">English</span>
+                                    </a>
+                                </li>
+                                <li translate="no" class="bs-c-site-sidebar__sublist-item" data-google-lang="fr">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <img src="/images/img/fr.png" class="c-flag-icon bs-c-site-sidebar__list-icon">
+                                        <span class="bs-c-site-sidebar__list-text">France</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__social-icons">
+                            <ul class="social-icons">
+                                <li class="social-icons__item"><a href="https://t.me/bitstarzcasino" rel="nofollow"
+                                        target="_blank" class="social-icons__icon is-telegram"></a></li>
+                                <li class="social-icons__item"><a href="https://www.facebook.com/BitStarzOfficial"
+                                        rel="nofollow" target="_blank" class="social-icons__icon is-facebook"></a></li>
+                                <li class="social-icons__item"><a href="https://twitter.com/bitstarzinsider"
+                                        rel="nofollow" target="_blank" class="social-icons__icon is-twitter"></a></li>
+                                <li class="social-icons__item"><a href="https://www.instagram.com/bitstarz_official/"
+                                        rel="nofollow" target="_blank" class="social-icons__icon is-instagram"></a></li>
+                                <li class="social-icons__item"><a href="https://vimeo.com/user102651714" rel="nofollow"
+                                        target="_blank" class="social-icons__icon is-vimeo"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bs-c-sidebar__overlay"></div>
+        </div>
+        <div class="bs-site-container">
+            <main>
+                <div>
+                    <div class="bs-c-page">
+                        <div class="basic-page faq">
+                            <div class="basic-page__content">
+                                <h1>FAQ</h1>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header"><em class="b-iconm_menuabout"></em>
+                                        Most Popular
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            How do I create my BitStarz account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>All you have to do to get started is click the 'Sign Up' button in the
+                                                upper left corner and fill in
+                                                all the required fields. We’ll then pop you over an email where you can
+                                                verify your email address
+                                                using the verification link we send you. Once all this is done, your
+                                                account will be fully active.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            What should I do if I have forgotten my password?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>The quickest way is to create a new password by clicking this <a href=""
+                                                    rel="nofollow">‘Forgot Password?’</a> link. We will then send an
+                                                email that will direct you to a
+                                                new link. Then you can enter a new password for you BitStarz account.
+                                            </p>
+                                            <p>Alternatively, you can contact our helpful customer support either by the
+                                                <a href="">Live
+                                                    Chat</a> option on the site or by emailing us at <a rel="nofollow"
+                                                    href="mailto:support@bitstarz.com">support@bitstarz.com</a>.
+                                                We will be more than happy to assist you further.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            Where can I purchase Bitcoins?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>There are plenty of places that allow you to buy and sell Bitcoins.
+                                                Online exchanges include <a href="https://www.coinbase.com"
+                                                    rel="nofollow">Coinbase</a>,
+                                                <a href="https://www.bitstamp.net" rel="nofollow">Bitstamp</a> and <a
+                                                    href="https://www.bitpanda.com/" rel="nofollow">Bitpanda</a>. To
+                                                find out more about buying Bitcoins, please visit our <a
+                                                    href="/about-bitcoin" class="faq__accordion-body-title"
+                                                    data-number-name="11">About Bitcoin</a>
+                                                page.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            Are the games fair?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>Of course they are. Some games from BGaming even have a Provability Fair
+                                                function so you can easily verify this yourself. Just click the
+                                                'Provability' button on the right edge of the screen whilst playing one
+                                                of those games to access the provability widget.</p>
+                                            <p>Games from other providers have fairness guaranteed by the curacao gaming
+                                                commission which we hold a license from. </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            Can I deposit with for example a card and cashout in Bitcoin?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>Unfortunately you can only cash out via the same way as you deposited. In
+                                                other words
+                                                if you for example use Skrill as a deposit method, you have to withdraw
+                                                to Skrill, and won’t
+                                                be able to withdraw to for example Neteller or to a card. The money has
+                                                to go back the same
+                                                way as they came in to your account.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header"><em class="b-iconmyaccountrobot-1"></em>
+                                        Account
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            Can I exchange currencies in my account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>Funds that are already on your account cannot be converted into another
+                                                currency.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            Can I have more than one account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>No, it is only allowed to open one account during your lifetime, even if
+                                                an old account is closed
+                                                down, you would have to request this one to be reopened as no new
+                                                accounts can not be created.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            How do I create my BitStarz account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>All you have to do to get started is click the 'Sign Up' button in the
+                                                upper left corner and fill in
+                                                all the required fields. We’ll then pop you over an email where you can
+                                                verify your email address
+                                                using the verification link we send you. Once all this is done, your
+                                                account will be fully active.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            What should I do if I have forgotten my password?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>The quickest way is to create a new password by clicking this <a href=""
+                                                    rel="nofollow">‘Forgot
+                                                    Password?’</a> link. We will then send an email that will direct you
+                                                to a
+                                                new link. Then you can enter a new password for you BitStarz account.
+                                            </p>
+                                            <p>Alternatively, you can contact our helpful customer support either by the
+                                                <a href="#">Live
+                                                    Chat</a> option on the site or by emailing us at <a rel="nofollow"
+                                                    href="mailto:support@bitstarz.com">support@bitstarz.com</a>.
+                                                We will be more than happy to assist you further.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            Can I change my registered email address?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>No. Unfortunately it's not possible to change your email address.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="6">
+                                            How do I add another currency to my account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="6">
+                                            <p>All you have to do is choose the currency from the deposit page, and it
+                                                will add to your
+                                                <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountDashboard&amp;acc_page_tab=null">Account</a>,
+                                                click
+                                                the 'Add Currency' button and select the currency you
+                                                want to add from the dropdown menu.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="7">
+                                            How can I switch between currencies?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="7">
+                                            <p>You can hover your mouse over the currency at the top right of the site
+                                                and change it from the
+                                                dropdown list. </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header bs-is-expanded"><em
+                                            class="b-icon-help_payments"></em>
+                                        Deposits &amp; Withdrawals
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            What happens if my deposit is not showing?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>
+                                                If your crypto deposit is not showing, this most likely means that
+                                                it has not yet been confirmed in
+                                                the <a href="https://www.blockchain.com/explorer">blockchain</a>, or
+                                                that your wallet has not yet
+                                                sent the funds, you can always check the blockchain to see if your
+                                                transfer is visible there, or ask
+                                                the support if you need a hand with this.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            How long does it take for deposits for show in my account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>
+                                                For Fiat currencies You won’t have to wait at all. Deposit
+                                                processing and account crediting are done
+                                                instantly, meaning you can start playing our games right away.
+                                            </p>
+                                            <p>
+                                                For cryptocurrencies, this depends on both how many transactions are
+                                                waiting currently in the
+                                                blockchain and on the fee used to transfer the funds with, however
+                                                in most cases this is completed
+                                                within a few minutes.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            What happens if I sent my deposit to another address or if I deposited
+                                            lower than the minimum amount?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>
+                                                As we do not have any access over the actual transfer being
+                                                made(this is done via the blockchain and
+                                                miners) , funds that are sent to another address or below the
+                                                minimum amount are unfortunately lost.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            What are the rules to withdrawing my balance?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>
+                                                Before a withdrawal is allowed to be made your deposit has to be
+                                                wagered at least one time, this
+                                                means that the amount you have deposited needs to be played for
+                                                once.
+                                            </p>
+                                            <p>
+                                                If the deposit is done via a cryptocurrency, then it has to be
+                                                wagered 1 time.
+                                            </p>
+                                            <p></p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            Is there a maximum withdrawal rule I should know about?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>
+                                                We don't enforce any limits now.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="6">
+                                            In which currencies can I deposit and withdraw?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="6">
+                                            <p>
+                                                We support the following “FIAT” currencies: EUR, NZD, CAD, AUD, NOK,
+                                                USD, RUB, CNY, PLN, JPY, BRL.
+                                            </p>
+                                            <p>
+                                                And also the following “Crypto” currencies: BTC, LTC, BCH, ETH, DOG,
+                                                USDT.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="7">
+                                            What are the fees on deposits and withdrawals?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="7">
+                                            <p>
+                                                There is no fees on withdrawals and for some deposit methods there
+                                                is a 2.5% fee, you can see a
+                                                complete list of this on our <a href="/payments">Payments page</a>.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="8">
+                                            What are your minimums on deposits and withdrawals?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="8">
+                                            <p>
+                                                The minimum amount we allow you to deposit is €20 or 0.00078 BTC
+                                                (0.78 mBTC). For deposits in other
+                                                currencies and minimum withdrawal limits, kindly refer to our <a
+                                                    href="/payments">Payments page</a>.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="9">
+                                            How long will it take for me to receive my money once I request a
+                                            withdrawal?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="9">
+                                            <p>We always aim to process withdrawal requests instantly and over 90%
+                                                happen that way, but that will
+                                                depend on the method used for deposit. Our average cashout time is
+                                                of 10 minutes and for more
+                                                information on processing times, please visit our <a
+                                                    href="/payments">Payments</a> page.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="10">
+                                            Can I deposit with for example a card and cashout in Bitcoin?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="10">
+                                            <p>Unfortunately you can only cash out via the same way as you
+                                                deposited. In other words
+                                                if you for example use Skrill as a deposit method, you have to
+                                                withdraw to Skrill, and won’t
+                                                be able to withdraw to for example Neteller or to a card. The money
+                                                has to go back the same
+                                                way as they came in to your account.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="11">
+                                            Where can I purchase Bitcoins?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="11">
+                                            <p>There are plenty of places that allow you to buy and sell Bitcoins.
+                                                Online exchanges include <a href="https://www.coinbase.com"
+                                                    rel="nofollow">Coinbase</a>,
+                                                <a href="https://www.bitstamp.net" rel="nofollow">Bitstamp</a> and
+                                                <a href="https://www.bitpanda.com/" rel="nofollow">Bitpanda</a>. To
+                                                find out more about buying
+                                                Bitcoins, please visit our
+                                                <a href="/about-bitcoin" class="faq__accordion-body-title"
+                                                    data-number-name="11">About
+                                                    Bitcoin</a> page.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header bs-is-expanded"><em class="b-icon_zrofees"></em>
+                                        Bonuses
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            What are Comp Points and how can I use them?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>
+                                                Comp Points can not be exchanged in any way, these are generated when
+                                                you play for your own
+                                                deposited
+                                                funds, and it is these ones that decides the level you are in our
+                                                campaigns, and each level you gain
+                                                in there does reward a bonus.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            Why can't I bet more than X / why can't I play X games?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>
+                                                When you are using a bonus there are a few rules that applies for this
+                                                when it comes to both maximum
+                                                bet and games that are allowed to be played. Until the bonus has been
+                                                wagered through, the maximum
+                                                bet is 5 EUR/GBP/USD/CAD/AUD, 10 BRL, 50 SEK/NOK,
+                                                0.00018 BTC, 0.037 BCH, 0.010 ETH, 63 DOGE, 0.059 LTC
+                                                20 PLN, or 300 RUB.
+                                            </p>
+                                            <p>
+                                                Certain games including all Jackpot games are unavailable for play, but
+                                                you don’t have to worry, if
+                                                you try to enter a game which you are not allowed to play with a bonus,
+                                                you will get an error
+                                                message
+                                                stating that the game is not available due to an active bonus.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            Does having a bonus affect my game play? (max bet, no cashouts on active,
+                                            max cashout on NDB, some
+                                            games not allowed)
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>
+                                                The above mentioned rules applies for all bonuses that we have at
+                                                bitstarz. We also have what is
+                                                called a “no deposit bonus” which has a maximum withdrawal that is
+                                                allowed to make from winnings of
+                                                such a bonus. This limit is 100 EUR/USD/CAD/AUD, 200 BRL, 1,000 SEK/NOK,
+                                                0.00362 BTC, 0.738 BCH, 1.179 LTC, 0.055 ETH, 1,250 DOGE
+                                                400 PLN, or 6,000 RUB. Examples of “no deposit bonuses” are the 20 free
+                                                spins upon
+                                                registration, Wednesday Free Spins Drops, Second Chance Spins, Friday
+                                                Loyalty Bonus.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            What is the difference between welcome bonus and welcome package?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>
+                                                Upon registering at bitstarz you will receive the welcome bonus, this is
+                                                20 free spins that can
+                                                activated here under your
+                                                <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountPromotions&amp;acc_page_tab=null">bonus
+                                                    page</a>.
+                                            </p>
+                                            <p>
+                                                The welcome package is the four deposit bonuses that you also get on the
+                                                first four deposits that
+                                                you
+                                                make and you can read more about these ones on our
+                                                <a href="/promotions">promotions page</a>.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            How can I claim the Welcome Package?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>
+                                                You only have to make a deposit of any amount above 20
+                                                EUR/GBP/USD/CAD/AUD, 30 BRL, 200 SEK/NOK,
+                                                1,000 RUB,
+                                                0.148 BCH, 0.236 LTC, 250 DOGE, 0.011 ETH
+                                                80 PLN, or
+                                                0.00072 BTC
+                                                and the Welcome Package is added automatically on the
+                                                first four deposits that you make. Also you will receive 180 free spins.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="6">
+                                            Why have I stopped receiving the spins from my Welcome Package?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="6">
+                                            <p>
+                                                As the free spins received from the first deposit bonus, is part of the
+                                                welcome package, if the
+                                                deposit bonus is cancelled, so are the free spins from this. Also if
+                                                another account is created from
+                                                the same IP/Device this also stops the free spins from being added
+                                                automatically.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="7">
+                                            What are wagering requirements?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="7">
+                                            <p>
+                                                A wagering
+                                                requirement is something that all bonuses have attached to them, and
+                                                what this means is that a bonus
+                                                needs to be wagered (played for) x amount of times before the bonus
+                                                funds are turned into real cash
+                                                that can be withdrawn.
+                                            </p>
+                                            <p>
+                                                As an example, most of our bonuses have a wagering requirement of 40x,
+                                                meaning that the total
+                                                wagering requirement of a bonus is 40 x the bonus amount that you
+                                                received. So if you receive a
+                                                bonus
+                                                of 10 the wagering requirement is then 10 x 40 = 400. This then means
+                                                that you would need to play
+                                                for
+                                                400 in total to complete the requirement. If you play each round for 1,
+                                                you would then need to play
+                                                400 rounds to complete it, and if you play each round for 2 instead,
+                                                then 200 rounds is needed.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="8">
+                                            Do all games contribute towards the wagering requirements?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="8">
+                                            <p>
+                                                Not all games are made equal when it comes to wagering a bonus
+                                                unfortunately. Live games, video
+                                                poker games and
+                                                table games contribute 5% of what you play for.
+                                            </p>
+                                            <p>
+                                                The following slot games do not contribute to the wagering: Immortal
+                                                Romance, Aliens, Mega Moolah,
+                                                Dead or Alive, Ragnarok, Pocket Dice, Lucky Angler, Eggomatic, Big Bang,
+                                                The Dark Knight,
+                                                Peek-A-Boo,
+                                                Tomb Raider, The Dark Knight Rises, Forsaken Kingdom, Scrooge, Secret of
+                                                the Stones, Terminator 2,
+                                                Champion of the Track, Robin Hood, Tomb Raider 2, Queen of Gold and
+                                                Castle Builder
+                                            </p>
+                                            <p>
+                                                The following slot games contribute with 75% of the wagering:
+                                                Bloodsuckers, Bloodsuckers touch,
+                                                Kings
+                                                of Chicago, Simsalabim, Zombies, Jack Hammer 2, Jack Hammer 2 touch,
+                                                Demolition Squad, Steam Tower,
+                                                Reel Rush, Reel Rush touch, Muse: Wild Inspiration, Victorious,
+                                                Victorious touch, Ghost Pirates,
+                                                Johnny the Octopus and Mega Gems contribute at a 50% rate. Jackpot 6000,
+                                                Mega Joker, Gypsy Rose and
+                                                Safari
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="9">
+                                            How can I find out how much I need to wager on my bonus?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="9">
+                                            <p>Go to <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountPromotions&amp;acc_page_tab=null">'Bonuses'</a>
+                                                page. There you can see your active bonus and how much you have left
+                                                to wager it. If you need more assistance then please feel free to
+                                                contact us at <a rel="nofollow"
+                                                    href="mailto:support@bitstarz.com">support@bitstarz.com</a>.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="10">
+                                            What are the wagering requirements on my deposits?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="10">
+                                            <p>
+                                                When you deposit without a bonus attached to the deposit you still need
+                                                to wager the deposit amount
+                                                once before a withdrawal is allowed to be made.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="11">
+                                            What are the wagering requirements on bonuses?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="11">
+                                            <p>
+                                                The Wagering Requirements for Free and Registration bonuses are forty
+                                                (40) times the Bonus sum
+                                                awarded to you, unless stated otherwise in the supplemental Terms and
+                                                Conditions.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header"><em class="b-icon-slots-off"></em>
+                                        The Casino
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            Are the games available on all currencies?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>
+                                                All games are available in most fiat currencies, however some providers
+                                                are not available when using
+                                                cryptocurrencies.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            Which games can I play with cryptocurrencies?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>
+                                                Not every provider are able to support cryptocurrencies so far, the
+                                                providers whose games you can
+                                                use
+                                                cryptocurrencies on are the following: BGAMING, Belatra, Booming Games,
+                                                Endorphina, Evolution,
+                                                Habanero, Platipus and Spinomenal
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            Are the games fair?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>Of course they are. Games from SoftSwiss provider 100% provably fair and
+                                                we offer you an easy and
+                                                straightforward way to verify them. When playing a game on the BitStarz
+                                                casino simply click the
+                                                'Provability' button on the right edge of the screen to access the
+                                                provability widget.</p>
+                                            <p>Games from other providers have fairness guaranteed by our gaming license
+                                                issued in Curacao by its
+                                                gaming commision.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            Can I play the casino games without spending any money?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>Yes, you can. You don’t have to spend any real money to try out the
+                                                games. Here at BitStarz we allow
+                                                you to play for free in order to familiarise yourself with our vast
+                                                library of games and discover
+                                                which one is your favourite.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            What happens if I encounter an error or the game freezes?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>
+                                                Most of the time, if your game freezes then you can pick up exactly
+                                                where you left off next time you
+                                                open the game. If there is no option for you to do this, then the round
+                                                will continue to play out on
+                                                the server. This will happen even if your computer is frozen or you lose
+                                                internet connection. All
+                                                your winnings will be paid into your account as normal.
+                                            </p>
+                                            <p>
+                                                In order to get back into the game a simple refresh of the site usually
+                                                works, and if this does not
+                                                let you back into the game, you just need to clear your cookies and
+                                                cache in your browser and it
+                                                shall work once again. Is the game still not opening up, you can contact
+                                                us on support@bitstarz.com
+                                                or via the <a href="">Live Chat</a> here
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="6">
+                                            I can’t get the casino game to start when I click the link. What should I
+                                            do?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="6">
+                                            <p>In case you would encounter issues playing we recommend you the following
+                                                steps:</p>
+                                            <ul>
+                                                <li>1. Try to logout and login</li>
+                                                <li>2. Clear cache/cookies for your browser</li>
+                                                <li>3. Try in another browser</li>
+                                            </ul>
+                                            <p>If you would still have issues after that we recommend you to take a
+                                                screenshot of the game and
+                                                contact our support team!</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="7">
+                                            An error or technical issue occurred in the casino. What should I do?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="7">
+                                            <p>We store every single spin you make in our database in order to help with
+                                                these problems. If you
+                                                feel that an error has occurred during your game play, then please
+                                                contact our support team.</p>
+                                            <p>Remember that the more information you can give us, the easier it will be
+                                                for us to resolve the
+                                                problem. Try to note down the game name, the amount of time you have
+                                                played, the stake you were
+                                                playing and details on what happened. If you are able to provide a
+                                                screenshot of the problem then
+                                                this will also assist us in fixing the problem.</p>
+                                            <p>It is always a good idea to stop playing until the issue has been
+                                                resolved.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="8">
+                                            How can I take a screenshot?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="8">
+                                            <p>A screenshot is a photo of the display currently on your computer screen.
+                                                The image will be saved in
+                                                your computer as a file, and can easily be attached to emails in order
+                                                to send to our support team.
+                                            </p>
+                                            <p>In order to take a screenshot in Windows, just follow the steps outlined
+                                                below:</p>
+                                            <p>Step 1: Ensure that the current view on your screen is the image you want
+                                                to take a screenshot of.
+                                                Close or minimise any additional windows that may be obscuring the view.
+                                            </p>
+                                            <p>Step 2: Press the 'Print Screen' button on your keyboard. This button is
+                                                usually located on the
+                                                right hand side of the keyboard.</p>
+                                            <p>Step 3: Open a 'Paint' or 'Word' program on your computer and then press
+                                                Ctrl + V to paste the image
+                                                in. You can also click the 'Paste' option from the ‘Edit’ menu to do
+                                                this. You will then see your
+                                                print screen image appear in the document.</p>
+                                            <p>Step 4: Save this file to your computer using a name that will help you
+                                                easily identify it. We also
+                                                recommend that you save it to your desktop to allow faster access to the
+                                                file.</p>
+                                            <p>Step 5: Attach this file into an email addressed to <a
+                                                    href="mailto:support@bitstarz.com"
+                                                    rel="nofollow">support@bitstarz.com</a>,
+                                                including all the additional information about the error.</p>
+                                            <p>In order to take a screenshot on a Mac, just follow the steps outlined
+                                                below:</p>
+                                            <p>Step 1: Ensure that the current view on your screen is the image you want
+                                                to take a screenshot of.
+                                                Close or minimise any additional windows that may be obscuring the view.
+                                            </p>
+                                            <p>Step 2: Press Shift + CMD + 4, then click on the spacebar to make the
+                                                camera appear. Click the mouse
+                                                in order to take a snapshot of the current window open on your screen.
+                                                This image will automatically
+                                                save to your computer desktop, with the current time and date.</p>
+                                            <p>Step 3: Attach this file into an email addressed to <a
+                                                    href="mailto:support@bitstarz.com"
+                                                    rel="nofollow">support@bitstarz.com</a>,
+                                                including all the additional information about the error.</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header"><em class="b-iconpromotion_password"></em>
+                                        Security
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            Am I required to upload documents and why?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>
+                                                Our top priority is to make sure that we keep all our players safe and
+                                                we take this very seriously.
+                                            </p>
+                                            <p>
+                                                If you are playing with cryptocurrencies such as Bitcoins you will not
+                                                have to provide documents as
+                                                a
+                                                standard. However, we do reserve the right to carry out additional
+                                                verification if we believe any
+                                                suspicious or fraudulent behaviour has occurred on your account.
+                                            </p>
+                                            <p>
+                                                If you play using a fiat currency such as EUR. We are regulated by the
+                                                Curacao Gaming Authority and
+                                                they request that we collect these documents on certain cases on behalf
+                                                of our players to create a
+                                                safe and regulated environment where you can fully enjoy the website.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            Are you GDPR compliant?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>
+                                                That we are, if you wish to get more details about it, you can find it
+                                                in our <a href="/terms">terms</a>
+                                                under point 3)PRIVACY POLICY.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            Is all my information secure on BitStarz?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>Always. As soon as you log in, any communication you make between your
+                                                web browser and the Bitstarz
+                                                website will be protected by industry-standard encryption technology.
+                                                This means that all your
+                                                personal data and any activity you make on the site will be kept
+                                                completely private.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            Are my Bitcoins secure on BitStarz?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>We take your security extremely seriously. Our experts have built in
+                                                various sophisticated measures
+                                                to prevent theft of funds or case sensitive information. In addition to
+                                                this, we follow all the best
+                                                practices to keep your coins safe, as outlined below:</p>
+                                            <ul>
+                                                <li>We store all the bitcoins in cold wallets, which are completely
+                                                    isolated from any online system.
+                                                    Being in cold wallets, they are protected with air-gap isolation
+                                                </li>
+                                                <li>All wallets are encrypted</li>
+                                            </ul>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            How does your KYC process work, how long does it take and will I be
+                                            notified? </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>
+                                                When you request a withdrawal, if we at this stage require documents
+                                                from you we will send you an
+                                                email within an hour asking for the required documents with instructions
+                                                on how to proceed.
+                                            </p>
+                                            <p>
+                                                The asked for documents then has to be uploaded under your
+                                                <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountProfile&amp;acc_page_tab=AccountProfileVerification">document
+                                                    section</a>
+                                                and will be verified
+                                                within 12 hours time, mostly this is done within one hour though.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="6">
+                                            Can my documents be refused?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="6">
+                                            <p>Yes. We must be in accordance to the rules stated by our licensing
+                                                institution in Curacao. In cases
+                                                where it is needed, we will reach out to you to ask for more or
+                                                alternative document copies, in
+                                                order
+                                                to stay within the law.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="7">
+                                            How can I make sure my account is fully protected?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="7">
+                                            <p>
+                                                There are a few steps you can take to make sure that your account is as
+                                                safe as it can be.
+                                            </p>
+                                            <p>
+                                                1. Make sure you are using a different password for bitstarz than your
+                                                email account connected to
+                                                your bitstarz account or any other site you are using.
+                                            </p>
+                                            <p>
+                                                2. Do regular virus scans on your computer to ensure no malicious
+                                                programs such as keyloggers that
+                                                can gather your secure information are hiding on your computer.
+                                            </p>
+                                            <p>
+                                                3. Enable 2FA for your account.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="8">
+                                            What is 2FA and why should I care?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="8">
+                                            <p>
+                                                2FA might sound very abstract, but it's a very simple tool to add
+                                                another layer of security to your
+                                                account. It's basically a second password which you add after you've
+                                                logged into your account for
+                                                additional verification.
+                                            </p>
+                                            <p>
+                                                It starts by you downloading an app to your phone which generates a
+                                                6-digit code every 30 seconds.
+                                                By
+                                                having this, it makes it nearly impossible for someone else to access
+                                                your account, even if they had
+                                                your password!
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="9">
+                                            How can I add 2FA to my account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="9">
+                                            <p>
+                                                First have to download the Google Authenticator app to your mobile
+                                                device. After that, log in to
+                                                your
+                                                account at BitStarz, go to
+                                                <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountProfile&amp;acc_page_tab=AccountProfileSecurity">Security
+                                                    section</a>
+                                            </p>
+                                            <p>
+                                                Click on Setup 2FA, scan the QR code displayed from your Google
+                                                Authenticator app. Add the current
+                                                code in the provided
+                                                field to complete the set-up.
+                                            </p>
+                                            <p>
+                                                Next time you log in, do so with your regular username and password. You
+                                                will thereafter be asked to
+                                                enter the current code from your Google Authenticator app. After that,
+                                                you’re ready to play!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header"><em class="b-icon_responsible"></em>
+                                        Responsible Gaming
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            Can I set up gambling limits for my account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>
+                                                Indeed, we offer a variety of different options from our <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountProfile&amp;acc_page_tab=AccountProfileLimits">limit
+                                                    page</a> that
+                                                you can set up to control your gambling. We offer the following limits
+                                                here.
+                                            </p>
+                                            <p>
+                                                Deposit limit, sets a limit on how much deposits you can make for the
+                                                chosen currency each
+                                                day/week/month.
+                                            </p>
+                                            <p>
+                                                Loss limit, stops play after x amount of losses has been made in the set
+                                                currency per
+                                                day/week/month.
+                                            </p>
+                                            <p>
+                                                Wagering limit, tracks how much has been played for in set currency and
+                                                stops play when x amount is
+                                                reached per day/week/month. Please note that you can easily wager for
+                                                example €100 without your
+                                                actual balance changing all too much.
+                                            </p>
+                                            <p>
+                                                Session limit, sets a limit on how long you can play in one go before
+                                                you are logged out from the
+                                                site, you will be able to log back in once again to play a new session
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            What is the difference between cooling off and self-exclusion?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>
+                                                A cooling off period is for when you wish to just take a small break
+                                                from playing, from a day up to
+                                                6
+                                                months. While on a cool off you can still log in to your account however
+                                                you will be blocked from
+                                                depositing and any promotion we have will not be sent to you, a cool off
+                                                will also be activated
+                                                automatically when the period is up, and can also be enabled sooner with
+                                                a 7 days re opening time.
+                                            </p>
+                                            <p>
+                                                A self exclusion is a longer period of time, 6 months to permanently,
+                                                and when it is closed you can
+                                                no longer log into to your account at all and it can not be reopened
+                                                before the time limit has
+                                                expired. You would need to contact us after the set limit has expired
+                                                for us to reopen the account
+                                                once more
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            Can I permanently close my BitStarz account?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>Yes, although for security and statistical reasons, <a
+                                                    href="/">BitStarz.com</a> cannot delete your
+                                                account.</p>
+                                            <p>If you wish to close your account permanently then please contact <a
+                                                    rel="nofollow"
+                                                    href="mailto:support@bitstarz.com">support@bitstarz.com</a>,
+                                                along with a brief explanation as to why you want to leave BitStarz. By
+                                                doing this, your account
+                                                will
+                                                be closed forever and you will be unable to re-open it again. Please
+                                                note, that you will not be able
+                                                to open a new account either.</p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            Can I disable my gambling limits?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>
+                                                That you can do from your <a
+                                                    href="faq?my_account=1&amp;acc_page=AccountProfile&amp;acc_page_tab=AccountProfileLimits">limit
+                                                    page</a>. You only need to
+                                                click on the “Edit” button for the limit you wish to raise/remove and
+                                                either enter a higher amount
+                                                or
+                                                click on “Disable”.
+                                            </p>
+                                            <p>
+                                                When this has been done a confirmation email will be sent to the
+                                                registered email address were you
+                                                just need to confirm the raise/removal. In 7 days from this moment the
+                                                limit will be raised/removed.
+                                            </p>
+                                            <p>
+                                                As the limits are there for responsible gaming reasons and to protect
+                                                you from your playing over
+                                                your
+                                                budget for a certain period of time. It takes 7 days to remove/raise a
+                                                limit so you can not on an
+                                                impulse go over and beyond the limit that you have chosen for yourself.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section-faq">
+                                    <h3 class="faq__accordion-header"><em class="b-icon_gettingstarted"></em>
+                                        Affiliate FAQ
+                                    </h3>
+                                    <div class="faq__accordion-body">
+                                        <h3 class="faq__accordion-body-title" data-number-name="1">
+                                            What is bitstarz affiliates?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="1">
+                                            <p>
+                                                BitStarz.com is the first online Casino to offer wagering in both Euro
+                                                and Bitcoins, with a great
+                                                player experience and the best games around. BitStarz Affiliates is a
+                                                program where we give you the
+                                                opportunity to earn money every month simply by giving us the chance to
+                                                welcome more players through
+                                                our virtual doors.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="2">
+                                            How much does it cost to join?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="2">
+                                            <p>
+                                                Absolutely nothing. It's 100% free.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="3">
+                                            Can I still join if I don’t have a website?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="3">
+                                            <p>
+                                                Of course you can. We can provide you with all the marketing tools you
+                                                will need to promote BitStarz
+                                                offline. This can be taken directly from your StarzPartners account or
+                                                your account manager can send
+                                                this to you via skype/email or Telegram.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="4">
+                                            How do I join?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="4">
+                                            <p>
+                                                To join BitStarz Affiliates and start earning today, all you have to do
+                                                is <a href="https://www.starzpartners.com/">sign up</a>
+                                                on our website. After having your account activated, you will be able to
+                                                find a tracking link and
+                                                reports.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="5">
+                                            What commission rates do you offer?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="5">
+                                            <p>
+                                                We give you the opportunity to earn some of the most competitive
+                                                commissions in the online gaming
+                                                industry. You can earn up to 40% revenue share every month with us.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="6">
+                                            How are players connected to my affiliate?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="6">
+                                            <p>
+                                                Every time a player clicks through to BitStarz from one of your links or
+                                                banners, something called a
+                                                cookie is placed on their computer. This means that when they register,
+                                                we can see your unique code
+                                                and will be able to assign that player to your account. You'll then earn
+                                                a revenue share every time
+                                                that player is active on the BitStarz casino.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="7">
+                                            How can I get a banner for my affiliate site?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="7">
+                                            <p>
+                                                From your affiliate page you need to select 'My campaigns'. Select
+                                                'Create New Campaign' option and
+                                                create a link or to generate an image tracked link for your players. The
+                                                name here is for your own
+                                                use to better track what link generates what revenue.
+                                            </p>
+                                            <p>
+                                                After the link(s) has been created you can choose to create more links
+                                                within this campaign as well
+                                                generate other banners.
+
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="8">
+                                            How can I work out my commission?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="8">
+                                            <p>
+                                                Your revenue share is calculated as a percentage of your Net Gaming
+                                                Revenue. Net Gaming Revenue =
+                                                (bets - wins – bonuses) – admin fee. To see this you go to your
+                                                <a href="https://www.starzpartners.com/">affiliate
+                                                    page</a> and select 'Reports', click on 'Statistics' and here you
+                                                will be able to filter your
+                                                display. Select 'Partner Income' under 'column' and your will be able to
+                                                see what you have earned
+                                                for that filtered date period.
+
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="9">
+                                            How can I see how much I’ve earned?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="9">
+                                            <p>
+
+                                                You can see this within your <a
+                                                    href="https://www.starzpartners.com/">affiliate page</a>. Select
+                                                'Reports' and then within the drop down click on 'Bills History'. This
+                                                will display at the top right
+                                                'All, Pending, Paid, Canceled'.
+
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="10">
+                                            Is there any minimum commission withdrawal amount?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="10">
+                                            <p>
+                                                Yes, minimum withdrawals for affiliates is 0.00389 BTC or €100. Should
+                                                you earned a lesser amount,
+                                                the
+                                                money will remain pending in the system until you have collected enough
+                                                money for us to process the
+                                                cashout.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="11">
+                                            How often/when do I get paid?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="11">
+                                            <p>
+                                                Affiliate commission payouts are processed once a month, between the 1st
+                                                and 5th of each month.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="12">
+                                            How do the commission get paid?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="12">
+                                            <p>
+                                                Your commission is paid directly into your <a
+                                                    href="https://www.starzpartners.com/">affiliate
+                                                    page</a>, and from there you can withdraw it.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="13">
+                                            Does bitstarz accept players from all countries?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="13">
+                                            <p>
+                                                From most of them but not all, please refer to <a href="/terms">terms
+                                                    and conditions</a> for
+                                                detailed
+                                                information regarding forbidden countries.
+                                            </p>
+                                        </div>
+                                        <h3 class="faq__accordion-body-title" data-number-name="14">
+                                            Can I refer myself?
+                                        </h3>
+                                        <div class="faq__accordion-body-content" data-number-content="14">
+                                            <p>
+                                                No, it's not allowed to join our affiliate program and use the website
+                                                benefits for your own
+                                                personal
+                                                gain. Affiliate needs at least 3 depositing players (active) before
+                                                their first commission is paid.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div>
+                <footer id="index-footer" class="footer">
+                    <div class="footer__inner">
+                        <div class="footer-social-icons-wrapper">
+                            <ul class="social-icons">
+                                <li class="social-icons__item">
+                                    <a href="https://t.me/#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-telegram"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-facebook"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-twitter"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-instagram"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank" class="social-icons__icon is-vimeo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-images__wrap">
+                        <div class="footer-images">
+                            <div class="footer-providers-slider">
+                                <div data-v-8364276a class="bs-c-footer-swiper__wrapper">
+                                    <button data-v-8364276a="" disabled="disabled"
+                                        class="c-button c-swiper-navigation__arrow bs-c-footer-swiper-button bs-c-footer-swiper-button-prev has-icon color-light-purple size-m">
+                                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                                            id="i-arrow-left" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.293 15.707a1 1 0 001.414-1.414L3.414 9H15a1 1 0 100-2H3.414l5.293-5.293A1 1 0 007.293.293l-7 7a.997.997 0 000 1.416m7 6.998l-7-7z" />
+                                        </svg>
+                                    </button>
+                                    <div class="bs-c-swiper bs-c-footer-swiper swiper-wrapper">
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 78px;">
+                                            <img src="/images/img/visa-img.svg" alt="visa">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 40px;">
+                                            <img src="/images/img/mastercard-img.svg" alt="mastercard">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 79px;">
+                                            <img src="/images/img/btc_accepted-img.svg" alt="btc_accepted">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 40px;">
+                                            <img src="/images/img/maestro-img.svg" alt="maestro">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 70px;">
+                                            <img src="/images/img/scrill-img.svg" alt="scrill">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/neteller-img.svg" alt="neteller">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/paysafecard-img.svg" alt="paysafecard">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 90px;">
+                                            <img src="/images/img/zimpler-img.svg" alt="zimpler">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 52px;">
+                                            <img src="/images/img/idebit-img.svg" alt="idebit">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/instadebit-img.svg" alt="instadebit">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 94px;">
+                                            <img src="/images/img/webmoney-img.svg" alt="webmoney">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 65px;">
+                                            <img src="/images/img/netent-img.svg" alt="netent">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 64px;">
+                                            <img src="/images/img/betsoft-img.svg" alt="betsoft">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 78px;">
+                                            <img src="/images/img/amatic-img.svg" alt="amatic">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 127px;">
+                                            <img src="/images/img/bgaming-img.svg" alt="bgaming">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 92px;">
+                                            <img src="/images/img/softswiss_casino-img.svg" alt="softswiss_casino">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/belatra-img.svg" alt="belatra">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/mascot-img.svg" alt="mascot">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 34px;">
+                                            <img src="/images/img/dreamtech-img.svg" alt="dreamtech">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 59px;">
+                                            <img src="/images/img/ezugi-img.svg" alt="ezugi">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 103px;">
+                                            <img src="/images/img/ask_gamblers-img.svg" alt="ask_gamblers">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 124px;">
+                                            <img src="/images/img/lcb-casino-of-the-month-img.svg"
+                                                alt="lcb-casino-of-the-month">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 128px;">
+                                            <img src="/images/img/bck-badge-img.svg" alt="bck-badge">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 39px;">
+                                            <img src="/images/img/rng-img.svg" alt="rng">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 55px;">
+                                            <img src="/images/img/gpwa-img.svg" alt="gpwa">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 24px;">
+                                            <img src="/images/img/itech-img.svg" alt="itech">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 22px;">
+                                            <img src="/images/img/ssl-img.svg" alt="ssl">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 61px;">
+                                            <img src="/images/img/interac-img.svg" alt="interac">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 46px;">
+                                            <img src="/images/img/interac2-img.svg" alt="intinterac2">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 73px;">
+                                            <img src="/images/img/coinspaid-img.svg" alt="coinspaid">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 68px;">
+                                            <img src="/images/img/casinoGuru-img.svg" alt="casinoGuru">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/casinomeister-img.svg" alt="casinomeister">
+                                        </span>
+                                    </div>
+                                    <button data-v-8364276a="" disabled="disabled"
+                                        class="c-button c-swiper-navigation__arrow bs-c-footer-swiper-button bs-c-footer-swiper-button-next has-icon color-light-purple size-m"><!---->
+                                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                                            id="i-arrow-right" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8.707.293a1 1 0 00-1.414 1.414L12.586 7H1a1 1 0 100 2h11.586l-5.293 5.293a1 1 0 101.414 1.414l7-7 .007-.006A.997.997 0 0016 8.003V8v-.003a.996.996 0 00-.286-.698l-.008-.007m-6.999-7l7 7z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-copyright">
+                            <div class="footer-copyright__top">
+                                <p class="footer-copyright__text">
+                                    Copyright &#169; 2014-2023 BitStarz. All Rights Reserved.
+                                </p>
+                                <ul class="footer-copyright__nav">
+                                    <li>
+                                        <a href="#">
+                                            Affiliate program
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/terms.html" class="faq__accordion-body-title" data-number-name="11">
+                                            Terms &amp; Conditions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/bonus-terms-and-conditions.html" class="faq__accordion-body-title"
+                                            data-number-name="11">
+                                            Bonus Terms &amp; Conditions
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="footer-copyright__icons">
+                                    <li>
+                                        <img src="/images/img/18years.png" alt="18">
+                                    </li>
+                                    <li>
+                                        <img src="/images/img/gamecare.png" alt="gamecare">
+                                    </li>
+                                    <li>
+                                        <img src="/images/img/ga-footer.png" alt="ga">
+                                    </li>
+                                    <li>
+                                        <div id="apg-seal-container"
+                                            data-apg-seal-id="9687875d-6966-4abf-98e4-e4fefd662e89"
+                                            class="apg-seal-container">
+                                            <div
+                                                style="display: block;position: relative;overflow: hidden;max-width: nullpx;min-width: 32px; background-image: url(https://9687875d-6966-4abf-98e4-e4fefd662e89.snippet.antillephone.com/54f396e0-b046-49b1-9cb3-0c69281d7ea9-beacon.png);">
+                                                <a target="_blank" rel="nonoopener"
+                                                    href="https://validator.antillephone.com/validate?domain=www.bitstarz.com&amp;seal_id=2914729f2a01e3a1231b63173c6d58c0104833cf64d6731d18c44998d15f31d32a048513a5bf34bdd14d95f43e5ef2d0&amp;stamp=7ccb20a6853d65d7195728148e321143">
+                                                    <img alt="" style="width: 100%; height: auto"
+                                                        src="/images/img/basic-large-valid-seal.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="footer-copyright__disclaimer">
+                                BitStarz was the first multi-currency online casino to offer play in major international
+                                currencies such as Dollars and
+                                Euros as well as Bitcoin and other Cryptocurrencies. BitStarz is owned and operated by
+                                Dama N.V. that is incorporated
+                                under the laws of Curacao with company registration number 152125 and having its
+                                registered address at Scharlooweg 39,
+                                Willemstad, Curaçao. Dama N.V. is operating under E-gaming license No. 8048/JAZ2020-13
+                                issued by Antillephone N.V.
+                                authorized by the government of Curacao. Friolion Ltd. is a company incorporated under
+                                the laws of Cyprus with company
+                                registration number HE 419102 and having its registered address at Leandrou, 12A 3086,
+                                Limassol, Cyprus. Friolion
+                                Limited is a facilitating company within DAMA group. DAMA group is operating under
+                                E-gaming licenses of
+                                Curacao(8048/JAZ2020-13), Estonia (HKL000255). All payments with Paysafe are made via
+                                Dama N.V. It is the player's sole
+                                responsibility to inquire about the existing laws and regulations of the given
+                                jurisdiction for online gambling. Contact: <a
+                                    href="mailto:support@bitstarz.com">support@bitstarz.com.</a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/main.js"></script>
+
+</html>

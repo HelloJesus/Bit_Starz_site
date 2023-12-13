@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <title>Title</title>
+    <script src="/js/lib/jquery-3.6.4.min.js"></script>
+    <script src="/js/lib/swiper-bundle.min.js"></script>
+    <script src="/js/lib/lazyload.min.js"></script>
+    <script src="/js/lib/js.cookie.min.js"></script>
+    <script src="/js/translate.js"></script>
+</head>
+
+<body>
+    <div id="basis" class="bs-site-wrap lang-en os-win is-chrome is-desktop is-logged-out-user">
+        <div class="header-wrapper" id="header-wrapper">
+            <header class="header-navbar navbar" id="header">
+                <button class="navbar__menu header-navbar__menu">
+                    <span class="navbar__menu-span"></span>
+                </button>
+                <a href="index.html" class="navbar__logo">
+                    <picture class="navbar__logo-img">
+                        <source media="(max-width: 477px)" srcset="/images/nav-logo-mobile.svg">
+                        <source media="(min-width: 478px)" srcset="/images/nav-logo-desktop.svg">
+                        <img src="/images/nav-logo-desktop.svg" alt="logo">
+                    </picture>
+                </a>
+                <section class="c-games-search navbar__search is-trending-games">
+                    <button class="c-button navbar__search-btn search--icon-mobile has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon navbar__search-icon icon sprite-icons" viewBox="0 0 50 50">
+                            <path
+                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
+                        </svg>
+                    </button>
+                    <div class="c-search-content navbar__search-content">
+                        <svg class="c-button__icon navbar__search-icon icon sprite-icons" viewBox="0 0 50 50">
+                            <path
+                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
+                        </svg>
+                        <input id="gameSearchInput" placeholder="Find game or game studio (try roulette, book...)"
+                            value="" class="c-search-input">
+                    </div>
+                </section>
+                <button class=" navbar__login login-btn c-button color-dark-purple size-m">
+                    <span>Log in</span>
+                </button>
+                <button class="c-button navbar__signup size-m">
+                    <strong>Sign up</strong>
+                </button>
+            </header>
+            <div class="bs-c-site-sidebar">
+                <div class="mobile-menu-header mobile-menu-header--sublist has-title">
+                    <button
+                        class="c-button mobile-menu-header__button mobile-menu-header__button--back is-back has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                            id="i-arrow-left" viewBox="0 0 16 16">
+                            <path
+                                d="M7.293 15.707a1 1 0 001.414-1.414L3.414 9H15a1 1 0 100-2H3.414l5.293-5.293A1 1 0 007.293.293l-7 7a.997.997 0 000 1.416m7 6.998l-7-7z" />
+                        </svg>
+                    </button>
+                    <span class="mobile-menu-header__title">More</span>
+                    <button
+                        class="c-button mobile-menu-header__button mobile-menu-header__button--close is-close has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                            id="i-icon-close" viewBox="0 0 16 16">
+                            <path
+                                d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mobile-menu-header mobile-menu-header--list">
+                    <img src="/images/bitstarz-logo-mobile-side.svg" alt="Bitstarz logo"
+                        class="mob-sidenav-header__logo">
+                    <button
+                        class="c-button mobile-menu-header__button mobile-menu-header__button--close is-close has-icon color-dark-purple size-m">
+                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                            id="i-icon-close" viewBox="0 0 16 16">
+                            <path
+                                d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="bs-c-site-sidebar__wrap is-tesla-widget-visible">
+                    <ul class="bs-c-site-sidebar__sublist-header bs-c-site-sidebar__sublist--mobile-table">
+
+                    </ul>
+                    <ul class="bs-c-site-sidebar__list">
+                        <li class="bs-c-site-sidebar__list-item ">
+                            <a href="/pages/index.html" class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+                                    <path
+                                        d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-sidebar"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-games" viewBox="0 0 20 26">
+                                    <path
+                                        d="M10.984 0a1 1 0 00-.865.527c-.143.228-.603.73-1.207 1.373-.62.659-1.38 1.494-2.111 2.559C5.337 6.589 4 9.654 4 14.014a1 1 0 102 0c0-3.959 1.163-6.552 2.45-8.422.537-.783 1.092-1.415 1.612-1.98.061.397.191.984.416 1.63 1.087 5.126 3.668 9.291 3.668 9.291a1.001 1.001 0 101.708-1.039s-1.064-1.806-2.075-4.377a8.922 8.922 0 003.164.895l.057.002a1 1 0 00.998-1.057c-.006-.119-.187-2.945-2.092-4.85-1.232-1.232-2.84-1.738-3.861-1.947-.027-.36-.041-.718-.043-1.076a1 1 0 00-.975-1.082.999.999 0 00-.043-.002zM3 16.014c-1.799 0-3 2.235-3 4a5 5 0 0010 0c0-1.765-1.201-4-3-4-.607 0-1.07.508-2 .508s-1.41-.508-2-.508zm10 0c-.696 0-1.3.338-1.781.851.503.965.781 2.07.781 3.149a6.95 6.95 0 01-.793 3.224c.917 1.078 2.267 1.776 3.793 1.776a5 5 0 005-5c0-1.765-1.201-4-3-4-.607 0-1.07.508-2 .508s-1.41-.508-2-.508z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    Games
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/slots.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-slots" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path d="M0 2a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H2a2 2 0 01-2-2z"
+                                                fill="#ffd22f" />
+                                            <g fill="#ad6006">
+                                                <rect height="3" rx="1" width="8" x="3" y="12" />
+                                                <rect height="7" rx="1" width="10" x="2" y="2" />
+                                                <path clip-rule="evenodd"
+                                                    d="M18 3.5a1.5 1.5 0 01-1 1.415V10a1 1 0 01-1 1h-.5a.5.5 0 010-1h.5V4.915A1.5 1.5 0 1118 3.5z"
+                                                    fill-rule="evenodd" />
+                                            </g>
+                                            <g fill="#ffd22f">
+                                                <rect height="3" rx="1" width="2" x="3" y="4" />
+                                                <rect height="3" rx="1" width="2" x="6" y="4" />
+                                                <rect height="3" rx="1" width="2" x="9" y="4" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Slots</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-table-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path
+                                                d="M10.835.258l4.966 1.33a2 2 0 011.414 2.45l-3.106 11.59a2 2 0 01-2.45 1.415l-4.966-1.33 3.189-7.437a2 2 0 00.15-.574z"
+                                                fill="#ad6006" />
+                                            <path d="M0 2a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M6.4 5.13a.68.68 0 00-.804.003c-.977.724-3.322 2.672-2.375 4.07.143.211.353.373.589.48.634.291 1.259.193 1.704-.124l-.509.849c-.158.264.042.592.361.592h1.268c.32 0 .52-.328.36-.592l-.509-.85c.407.29.962.397 1.537.193.24-.085.458-.224.626-.408C9.92 7.957 7.414 5.88 6.4 5.13z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Table Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bitstarz-originals"
+                                            fill="none" viewBox="0 0 18 18">
+                                            <circle cx="9" cy="9" fill="#ffd22f" r="9" />
+                                            <path clip-rule="evenodd"
+                                                d="M6.916 7.257s.47-.033.635-.299c.164-.265 1.073-2.287 1.073-2.287s.36-.358.724-.038c.291.258 1.092 2.26 1.092 2.26s.141.32.517.353c.376.033 2.608.266 2.608.266s.626.247.376.653c-.121.197-2.067 1.86-2.067 1.86s-.236.31-.165.542c.07.233.552 2.203.552 2.203s.036.399-.14.576c-.177.177-.283.188-.553.1-.27-.089-2.314-1.307-2.314-1.307s-.235-.1-.447.011c-.21.111-2.208 1.23-2.208 1.23s-.717.398-.87-.278c-.023-.52.494-2.048.494-2.048s.212-.686-.106-.996C5.8 9.748 4.18 8.33 4.18 8.33s-.446-.465.07-.753c.53-.177 2.667-.32 2.667-.32z"
+                                                fill="#ad6006" fill-rule="evenodd" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">BitStarz Originals</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-livespin" viewBox="0 0 18 18"
+                                            fill="none">
+                                            <g clip-path="url(#clip0_1705_57)">
+                                                <circle cx="9" cy="9" r="9" fill="#A36424" />
+                                                <path
+                                                    d="M9 18a9 9 0 009-9 9 9 0 00-9-9 9 9 0 00-9 9 9 9 0 009 9zM7.312 5.062a1.688 1.688 0 013.375 0V9a1.688 1.688 0 01-3.374 0V5.062zm-2.25 2.813c.31 0 .563.253.563.563V9a3.376 3.376 0 006.75 0v-.563c0-.309.253-.562.563-.562.309 0 .562.253.562.563V9a4.502 4.502 0 01-3.938 4.465v.598c0 .309-.253.562-.562.562a.564.564 0 01-.563-.563v-.597A4.502 4.502 0 014.5 9v-.563c0-.309.253-.562.563-.562z"
+                                                    fill="#F8D454" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Bet Along Streamers</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-jackpots" fill="none"
+                                            viewBox="0 0 18 14">
+                                            <path
+                                                d="M0 4C0 2.114 0 1.172.586.586 1.172 0 2.114 0 4 0h10c1.886 0 2.828 0 3.414.586C18 1.172 18 2.114 18 4v6c0 1.886 0 2.828-.586 3.414S15.886 14 14 14H4c-1.886 0-2.828 0-3.414-.586C0 12.828 0 11.886 0 10z"
+                                                fill="#ffd22f" />
+                                            <g fill="#ad6006">
+                                                <path
+                                                    d="M2.808 9.032a.685.685 0 101.248.565l1.855-4.1A1 1 0 006 5.085V5a1 1 0 00-1-1H2.65a.65.65 0 000 1.3h1.805a.029.029 0 01.027.042zM7.808 9.032a.685.685 0 101.248.565l1.855-4.1A1 1 0 0011 5.085V5a1 1 0 00-1-1H7.65a.65.65 0 000 1.3h1.805a.029.029 0 01.027.042zM12.808 9.032a.685.685 0 101.248.565l1.855-4.1A1 1 0 0016 5.085V5a1 1 0 00-1-1h-2.35a.65.65 0 100 1.3h1.805a.029.029 0 01.027.042z" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Jackpots</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-live-casino" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <circle cx="9" cy="9" fill="#ffd22f" r="9" />
+                                            <g fill="#ad6006">
+                                                <path
+                                                    d="M9 4a1 1 0 100-2 1 1 0 000 2zM15 10a1 1 0 100-2 1 1 0 000 2zM4 9a1 1 0 11-2 0 1 1 0 012 0zM9 16a1 1 0 100-2 1 1 0 000 2zM12.536 5.464A1 1 0 1013.95 4.05a1 1 0 00-1.414 1.414zM12.536 13.95a1 1 0 101.414-1.415 1 1 0 00-1.414 1.415zM5.464 5.464A1 1 0 114.05 4.05a1 1 0 011.414 1.414zM4.05 13.95a1 1 0 101.414-1.415A1 1 0 004.05 13.95zM9.273 6.079C9.193 6.033 9.103 6 9 6s-.194.033-.273.079l-.024.005C7.816 6.703 6 8.238 6 9.214c0 .829.783 1.5 1.75 1.5.404 0 .77-.122 1.065-.319-.257.588-.662.95-1.159 1.192-.091.032-.156.109-.156.199 0 .118.112.214.25.214h2.5c.138 0 .25-.096.25-.214 0-.09-.065-.167-.156-.199-.497-.242-.902-.604-1.16-1.192.296.197.663.32 1.066.32.967 0 1.75-.672 1.75-1.5 0-.977-1.816-2.512-2.703-3.131z" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Live Casino</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bitcoin-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <circle cx="9" cy="9" fill="#ffd22f" r="9" />
+                                            <path
+                                                d="M12.98 7.824c.166-1.26-.682-1.939-1.84-2.39l.376-1.709-.918-.259-.366 1.663a34.683 34.683 0 00-.735-.196l.369-1.674L8.949 3l-.376 1.707c-.2-.051-.396-.102-.586-.156v-.005l-1.264-.358-.244 1.11s.68.177.666.188c.372.105.439.384.427.605l-.428 1.946a.698.698 0 01.096.034l-.097-.027-.6 2.726c-.046.128-.16.32-.42.247.009.015-.668-.189-.668-.189L5 12.018l1.194.338c.222.063.44.129.654.191l-.38 1.728.917.259.376-1.71c.25.078.493.149.731.216l-.375 1.7.918.26.38-1.724c1.564.335 2.74.2 3.236-1.404.399-1.29-.02-2.036-.843-2.521.6-.157 1.05-.604 1.171-1.527zm-2.097 3.331c-.284 1.292-2.202.594-2.824.419l.504-2.29c.622.177 2.616.525 2.32 1.871zm.284-3.35c-.26 1.175-1.856.578-2.374.432l.457-2.076c.518.146 2.186.42 1.917 1.645z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Bitcoin Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-top-games" fill="none"
+                                            viewBox="0 0 18 15">
+                                            <path
+                                                d="M10.826 0a1.25 1.25 0 00-.859.342L5.474 4.629A1.51 1.51 0 005 5.72v7.731C5 14.309 5.727 15 6.625 15h7.306c.65 0 1.237-.368 1.493-.937l2.444-5.418c.087-.192.132-.4.132-.61V6.489c0-.855-.727-1.547-1.625-1.547h-5.16l.807-3.532c.09-.39-.038-.797-.336-1.076a1.248 1.248 0 00-.86-.334z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M0 5.833C0 5.373.336 5 .75 5h1.5c.414 0 .75.373.75.833v8.334c0 .46-.336.833-.75.833H.75c-.414 0-.75-.373-.75-.833z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Top Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-st-patricks-games"
+                                            viewBox="0 0 18 18" fill="none">
+                                            <g clip-path="url(#clip0_1802_7)">
+                                                <path
+                                                    d="M9.092 0c-.84-.015-1.65.627-1.884 1.557-.3 1.19.302 3.81.626 5.06-.95-.875-2.977-2.644-4.17-2.943-1.065-.268-2.153.307-2.394 1.26a1.67 1.67 0 00.111 1.126c.132.29.06.611-.19.808-.306.241-.55.568-.643.933-.24.956.447 1.974 1.512 2.242 1.194.3 3.816-.302 5.067-.626-.877.948-2.648 2.973-2.948 4.164-.267 1.063.307 2.148 1.264 2.388.367.092.77.032 1.127-.123a.66.66 0 01.803.213c.222.293.53.527.941.63.958.24 1.977-.446 2.245-1.508.3-1.191-.302-3.811-.626-5.06.949.875 2.977 2.644 4.17 2.942 1.065.267 2.153-.306 2.394-1.26.092-.366.03-.77-.125-1.125a.657.657 0 01.215-.802 1.67 1.67 0 00.63-.939c.241-.955-.445-1.975-1.51-2.242-1.194-.3-3.818.301-5.068.625.876-.948 2.648-2.971 2.947-4.162.268-1.063-.306-2.15-1.263-2.39a1.683 1.683 0 00-1.127.111.66.66 0 01-.809-.19c-.24-.305-.568-.549-.934-.64A1.602 1.602 0 009.092 0zm2.893 13.546c.039.444.045.838.025 1.188 1 1.248 2.144 2.408 3.357 3.163a.692.692 0 10.73-1.176c-.927-.577-1.82-1.446-2.639-2.413-.43-.151-.92-.403-1.473-.762z"
+                                                    fill="#FFD25E" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Paddy's Picks</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-trending-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path d="M18 9A9 9 0 100 9a9 9 0 0018 0z" fill="#ffd22f" />
+                                            <path
+                                                d="M8.1 12.6V7.573L6.673 9A.9.9 0 015.4 7.727l2.964-2.963a.9.9 0 011.272 0L12.6 7.727A.9.9 0 0111.327 9L9.9 7.573V12.6a.9.9 0 01-1.8 0z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Trending Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-new-games" fill="none"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M18.34.008a1.825 1.825 0 00-.42.01C15.632.337 10.717 1.045 5.682 7H3.6c-.347 0-.68.142-.92.392L.38 9.785A1.293 1.293 0 00.1 11.2c.2.487.672.8 1.199.8h2.459c-.332.375-.506.773-.692 1.225-.206.501-.387 1.054-.543 1.577-.31 1.046-.517 1.982-.517 1.982a1 1 0 001.193 1.193s.937-.206 1.983-.517a16.813 16.813 0 001.576-.543c.452-.186.85-.36 1.224-.692v2.46c0 .526.314.999.801 1.199.165.069.337.1.506.1.331 0 .651-.123.875-.348l2.4-2.188c.266-.242.418-.584.418-.943V14.3c5.952-5.035 6.661-9.951 6.983-12.239a1.797 1.797 0 00-.512-1.53A1.803 1.803 0 0018.34.007zM5.623 12.945l1.414 1.414-.348.348c.018-.018-.293.195-.693.36-.4.164-.902.33-1.385.474-.12.036-.114.028-.23.06.033-.116.024-.11.06-.23.144-.483.31-.985.475-1.385.164-.4.377-.711.36-.693z"
+                                                fill="#ffd22f" />
+                                            <g fill="#ad6006">
+                                                <path
+                                                    d="M15.982 5.5a1.5 1.5 0 10-3 .001 1.5 1.5 0 003-.001zM11.982 9.5a1.5 1.5 0 10-3 .001 1.5 1.5 0 003-.001z" />
+                                            </g>
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">New Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-hot-games" fill="none"
+                                            viewBox="0 0 14 18">
+                                            <path
+                                                d="M13.995 11.253c-.02-2.238-1.26-4.425-2.168-6.025-.2-.356-.39-.687-.548-.992l-.328-.628c-.203-.321-.437-.372-.72-.002 0 0-.47.587-.768.997C8.386 2.582 7.834 1.017 7.827.997L7.6.345C7.445-.06 7.201-.11 6.864.207L6.38.67C6.118.92 0 6.825 0 11.305 0 14.996 3.14 18 6.997 18c3.859 0 6.998-3.003 6.998-6.695v-.003-.038l.005-.007z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M4.375 13.691c.066-1.937 1.643-3.849 2.319-4.583a.239.239 0 01.403.099c.645 2.235 2.631 2.993 2.524 4.609-.095 1.447-1.275 2.612-2.823 2.504-1.385-.098-2.467-1.3-2.423-2.629z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Hot Games - 24h</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-cold-games" fill="none"
+                                            viewBox="0 0 14 18">
+                                            <path
+                                                d="M7.659.288a.897.897 0 00-1.318 0C4.6 2.2 0 7.592 0 11.26 0 15.015 3.1 18 7 18s7-2.985 7-6.74C14 7.592 9.401 2.2 7.659.288z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M10.382 13.621a.894.894 0 01-1.2.293l-1.307-.75v1.466c0 .465-.392.842-.875.842s-.875-.377-.875-.842v-1.465l-1.307.75a.894.894 0 01-1.2-.293.826.826 0 01.304-1.156l1.368-.785-1.368-.785a.825.825 0 01-.304-1.155.895.895 0 011.2-.294l1.307.75V8.732c0-.465.392-.842.875-.842s.875.377.875.842v1.465l1.307-.75c.415-.238.952-.107 1.2.293s.111.917-.304 1.156l-1.368.785 1.368.785a.825.825 0 01.304 1.155z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Cold Games - 24h</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-slots"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-megaways-games" fill="none"
+                                            viewBox="0 0 18 18">
+                                            <path
+                                                d="M9 0c-.796 0-1.504.335-1.999.857h-1.6c-.614 0-1.048.574-.854 1.128l.401 1.15a.452.452 0 00.43.294h7.245a.45.45 0 00.427-.293l.402-1.15c.196-.555-.24-1.129-.854-1.129h-1.6A2.742 2.742 0 009 0zM5.4 5.143S0 7.726 0 13.714c0 .716.093 1.352.267 1.916C.71 17.056 2.135 18 3.697 18h10.606c1.562 0 2.988-.944 3.43-2.37A6.45 6.45 0 0018 13.713c0-5.987-5.4-8.571-5.4-8.571z"
+                                                fill="#ffd22f" />
+                                            <path
+                                                d="M9.293 6.5h-.005a.402.402 0 00-.411.392v.725C8.599 7.65 7.04 7.93 7.04 9.72c0 2.613 2.84 1.84 2.84 3.583 0 .872-.592.894-.713.894-.092 0-.609.038-.779-.722-.074-.33-.394-.56-.749-.56h-.001c-.494 0-.87.442-.747.898.382 1.416 1.653 1.55 1.87 1.579v.648c0 .216.184.391.411.391s.412-.175.412-.391v-.648c.278-.034 1.847-.279 1.847-2.1 0-2.507-2.839-2.028-2.839-3.565 0-.881.449-.908.619-.908.172 0 .497.105.626.677.075.331.39.565.747.565.498 0 .873-.45.743-.909a2.05 2.05 0 00-1.622-1.515v-.746a.402.402 0 00-.412-.392z"
+                                                fill="#ad6006" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Megaways</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden is-buy-bonus-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus" viewBox="0 0 12 12">
+                                            <path
+                                                d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Buy Bonus Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-classic-slots-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-classic-slots-games"
+                                            fill="none" viewBox="0 0 24 26">
+                                            <path
+                                                d="M17 4.34a1.5 1.5 0 00-2.049.549l-.348.602a5.997 5.997 0 00-6.799 2.777l-2.5 4.33 10.392 6 2.5-4.33a5.998 5.998 0 00-.995-7.277l.348-.602A1.5 1.5 0 0017 4.339zM3.438 13.83a1.002 1.002 0 00-1.476 1.125 1 1 0 00.476.607L7 18.197a2 2 0 00-.933 2.249 2 2 0 003.664.482 2 2 0 00.265-1.001l4.565 2.635a.998.998 0 001.379-.359 1 1 0 00-.379-1.373z"
+                                                fill="#ffd22f" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Classic Slots</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-book-of-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-book-of-games" fill="none"
+                                            viewBox="0 0 20 17">
+                                            <path
+                                                d="M14 0a3 3 0 00-3 3v10a1 1 0 01-2 0V3a3 3 0 00-3-3H1a1 1 0 00-1 1v13a2 2 0 002 2h6.277c.346.595.984 1 1.723 1s1.376-.405 1.723-1H18a2 2 0 002-2V1a1 1 0 00-1-1z"
+                                                fill="#ffd22f" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">"Book Of" Games</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-sidebar is-golden is-provably-fair-games"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-provably-fair-games"
+                                            fill="none" viewBox="0 0 18 22">
+                                            <path
+                                                d="M8.188.172l-7 3.112A1.999 1.999 0 000 5.112v4.7c0 7.83 6.439 11.486 9 12 2.561-.514 9-4.17 9-12v-4.7a2 2 0 00-1.188-1.828l-7-3.111a1.997 1.997 0 00-1.624 0z"
+                                                fill="#ffd22f" />
+                                            <path clip-rule="evenodd"
+                                                d="M14.607 7.536a1 1 0 00-1.415 0l-4.95 4.95-2.12-2.122a1 1 0 10-1.415 1.414l2.829 2.829a1 1 0 001.414 0l.707-.708 4.95-4.95a1 1 0 000-1.413z"
+                                                fill="#ad6006" fill-rule="evenodd" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Provably Fair Games</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul open">
+                            <div class="bs-c-site-sidebar__list-link is-active">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-promotions" viewBox="0 0 24 26">
+                                    <path
+                                        d="M14.5 0a3.5 3.5 0 00-2.857 1.5A2.967 2.967 0 0010 1C8.355 1 7 2.355 7 4c0 .352.074.685.188 1H2a2 2 0 00-2 2v2h24V7a2 2 0 00-2-2h-4.356A3.44 3.44 0 0018 3.5C18 1.579 16.421 0 14.5 0zm0 2c.84 0 1.5.66 1.5 1.5S15.34 5 14.5 5H13V3.5c0-.84.66-1.5 1.5-1.5zM10 3c.565 0 1 .435 1 1v1h-1c-.565 0-1-.435-1-1s.435-1 1-1zm-9 8v13a2 2 0 002 2h18a2 2 0 002-2V11zm8.777 3c.913 0 1.717.447 2.223 1.127A2.766 2.766 0 0114.223 14 2.777 2.777 0 0117 16.777c0 2.238-3.247 5.036-4.508 6.04a.786.786 0 01-.984 0C10.247 21.812 7 19.014 7 16.776A2.777 2.777 0 019.777 14z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    Promotions
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/promotions.html" class="bs-c-site-sidebar__sublist-link active">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus" viewBox="0 0 12 12">
+                                            <path
+                                                d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Welcome Package</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/slotwars.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                            viewBox="0 0 14 12">
+                                            <path
+                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Slot Wars</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                            viewBox="0 0 14 12">
+                                            <path
+                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Table game</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-golden"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                            viewBox="0 0 14 12">
+                                            <path
+                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Welcome Freeroll</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item">
+                            <a href="/pages/vip.html" class="bs-c-site-sidebar__list-link ">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-sidebar"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-vip" viewBox="0 0 26 20">
+                                    <path
+                                        d="M2 0a2 2 0 00-2 2v16a2 2 0 002 2h22a2 2 0 002-2V2a2 2 0 00-2-2zm.67 6h2.334l1.535 5.889h.106l1.49-5.89h2.195l-2.512 8H5.246zm9.312 0h2.036v8h-2.036zM16 6h3.504c1.719 0 2.883 1.12 2.883 2.84 0 1.702-1.225 2.814-3.004 2.814h-1.348V14H16zm2.035 1.562v2.557h.92c.865 0 1.375-.444 1.375-1.275 0-.843-.504-1.282-1.363-1.282z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">VIP</span>
+                            </a>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul ">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-help-center" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.5a1.5 1.5 0 11.001-3.001 1.5 1.5 0 01-.001 3zm2.068-7C13.406 13.11 13 13.512 13 14h-2c0-1.39.949-2.265 1.711-2.97C13.51 10.292 14 9.799 14 9c0-1.103-.897-2-2-2s-2 .897-2 2H8c0-2.206 1.794-4 4-4s4 1.794 4 4c0 1.715-1.071 2.704-1.932 3.5z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    Help
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist  ">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/faq.html" class="bs-c-site-sidebar__sublist-link ">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">FAQ</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/about-bitcoin.html" class="bs-c-site-sidebar__sublist-link ">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">About Bitcoin</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/btc-to-eur-exchanger.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Instant BTC to EUR exchanger</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/provability-explained.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Provability Explained</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/play-safe.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Play Safe</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/complaints.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Complaints</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/how-to-buy-crypto-at-bitstarz.html"
+                                        class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">How to buy Crypto</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <svg class="bs-c-site-sidebar__list-icon icon sprite-icons"
+                                    xmlns="http://www.w3.org/2000/svg" id="i-icon-more" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 14A2 2 0 1111.999 10 2 2 0 0112 14zm7 0A2 2 0 1118.999 10 2 2 0 0119 14zM5 14A2 2 0 114.999 10 2 2 0 015 14z" />
+                                </svg>
+                                <span class="bs-c-site-sidebar__list-text">
+                                    More
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/about-us.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">About Us</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/terms.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Terms & Conditions</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/bonus-terms-and-conditions.html"
+                                        class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Bonus Terms & Conditions</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/payments.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Payments</span>
+                                    </a>
+                                </li>
+                                <li class="bs-c-site-sidebar__sublist-item">
+                                    <a href="/pages/privacy-policy.html" class="bs-c-site-sidebar__sublist-link">
+                                        <svg class="bs-c-site-sidebar__list-icon is-dropdown icon sprite-icons is-arrow"
+                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-right" viewBox="0 0 5 8">
+                                            <path
+                                                d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                        </svg>
+                                        <span class="bs-c-site-sidebar__list-text">Privacy Policy</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__list-item bs-c-site-sidebar__list-item-ul">
+                            <div class="bs-c-site-sidebar__list-link">
+                                <img src=""
+                                    class="c-flag-icon bs-c-site-sidebar__list-icon bs-c-site-sidebar__list-icon--active">
+                                <span class="bs-c-site-sidebar__list-text bs-c-site-sidebar__list-text--active-lang">
+                                    <!-- English -->
+                                </span>
+                                <span class="bs-c-site-sidebar__arrow">
+                                    <svg class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg" id="i-icon-right"
+                                        viewBox="0 0 5 8">
+                                        <path
+                                            d="M.293.636a1 1 0 000 1.414l2.121 2.122-2.121 2.12a1 1 0 001.414 1.415L4.536 4.88a1 1 0 000-1.415L1.707.636a1 1 0 00-1.414 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ul class="bs-c-site-sidebar__sublist">
+                                <li translate="no" class="bs-c-site-sidebar__sublist-item bs-c-site-sidebar__sublist-text--active-lang"
+                                    data-google-lang="en">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <img src="/images/img/en.png" class="c-flag-icon bs-c-site-sidebar__list-icon">
+                                        <span class="bs-c-site-sidebar__list-text">English</span>
+                                    </a>
+                                </li>
+                                <li translate="no" class="bs-c-site-sidebar__sublist-item" data-google-lang="fr">
+                                    <a href="#" class="bs-c-site-sidebar__sublist-link">
+                                        <img src="/images/img/fr.png" class="c-flag-icon bs-c-site-sidebar__list-icon">
+                                        <span class="bs-c-site-sidebar__list-text">France</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bs-c-site-sidebar__social-icons">
+                            <ul class="social-icons">
+                                <li class="social-icons__item"><a href="https://t.me/bitstarzcasino" rel="nofollow"
+                                        target="_blank" class="social-icons__icon is-telegram"></a></li>
+                                <li class="social-icons__item"><a href="https://www.facebook.com/BitStarzOfficial"
+                                        rel="nofollow" target="_blank" class="social-icons__icon is-facebook"></a></li>
+                                <li class="social-icons__item"><a href="https://twitter.com/bitstarzinsider"
+                                        rel="nofollow" target="_blank" class="social-icons__icon is-twitter"></a></li>
+                                <li class="social-icons__item"><a href="https://www.instagram.com/bitstarz_official/"
+                                        rel="nofollow" target="_blank" class="social-icons__icon is-instagram"></a></li>
+                                <li class="social-icons__item"><a href="https://vimeo.com/user102651714" rel="nofollow"
+                                        target="_blank" class="social-icons__icon is-vimeo"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bs-c-sidebar__overlay"></div>
+        </div>
+        <div class="bs-site-container">
+            <main>
+                <div>
+                    <div class="promotions-page">
+                        <div class="promotions-page__heading">
+                            <h1 class="promotions-section__title">
+                                Promotions
+                            </h1>
+                        </div>
+                        <div class="promotion_cards"><!---->
+                            <div class="promotions-section">
+                                <div class="promotions-section__title-wrapper">
+                                    <h3 class="promotions-section__title">
+                                        Promotions &amp; Tournaments
+                                    </h3>
+                                </div> <!---->
+                                <div class="promotions-section-wrapper">
+                                    <div class="bs-c-swiper promotions-section__swiper-wrapper" style="">
+                                        <div class="promo-card-wrapper is-welcome-package locale-en currency-USD"
+                                            style="order: 0;">
+                                            <div class="promo-card is-front is-welcome-package">
+                                                <div class="promo-card__header">
+                                                    <span class="promo-card__label">
+                                                        <svg class="icon sprite-icons is-bonus"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus"
+                                                            viewBox="0 0 12 12">
+                                                            <path
+                                                                d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="promo-card__title">Welcome
+                                                        Package</span> <span
+                                                        class="promo-card__label is-info promo-card__label--js">
+                                                        <svg class="icon sprite-icons"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-i"
+                                                            viewBox="0 0 2 12">
+                                                            <path
+                                                                d="M1 2a1 1 0 100-2 1 1 0 000 2zm0 2a1 1 0 00-1 1v6a1 1 0 102 0V5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="promo-card__main">
+                                                    <div class="promo-card__body">
+                                                        <div class="promo-card__welcome-bonus"><strong>$500</strong>
+                                                            <em>or</em> <strong class="is-btc">5BTC</strong> <span>+ 180
+                                                                Free Spins</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-card__click-area"></div>
+                                                </div>
+                                            </div>
+                                            <div class="promo-card is-back is-welcome-package">
+                                                <div class="promo-card__back-inner">
+                                                    <div class="promo-card__header">
+                                                        <span class="promo-card__label">
+                                                            <svg class="icon sprite-icons is-bonus"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus"
+                                                                viewBox="0 0 12 12">
+                                                                <path
+                                                                    d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span class="promo-card__title">Welcome
+                                                            Package</span> <span
+                                                            class="promo-card__label is-close promo-card__label-close-js"><svg
+                                                                class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-close"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                                                            </svg></span>
+                                                    </div>
+                                                    <div class="promo-card__backyard">
+                                                        <ul class="promo-card__explanation">
+                                                            <li><strong class="promo-card__explanation-intro">$500 or 5
+                                                                    BTC + 180 Free Spins</strong></li>
+                                                            <li class="promo-card__expo-1st-deposit no-flex">
+                                                                <p><span>1st deposit</span> <strong>
+                                                                        100% up to $100 or 1 BTC <br>+ 180 Free Spins
+                                                                    </strong></p>
+                                                                <p>
+                                                                    20 Instant free spins + 160 (20 per day, starting in
+                                                                    24 hours). A minimum deposit of $20 is required to
+                                                                    receive the 180 free spins.
+                                                                    <!---->
+                                                                </p>
+                                                            </li>
+                                                            <li class="promo-card__expo-2nd-deposit"><span>2nd
+                                                                    deposit</span> <strong>50% up to $100 or 1
+                                                                    BTC</strong></li>
+                                                            <li class="promo-card__expo-3rd-deposit"><span>3rd
+                                                                    deposit</span> <strong>50% up to $200 or 2
+                                                                    BTC</strong></li>
+                                                            <li class="promo-card__expo-4th-deposit"><span>4th
+                                                                    deposit</span> <strong>100% up to $100 or 1
+                                                                    BTC</strong></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="promo-card__bonus-mobile-overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="promo-card-wrapper bs-c-tournament-card is-slot-wars locale-en currency-USD"
+                                            style="order: 10;">
+                                            <div class="promo-card is-front bs-c-tournament-card is-slot-wars">
+                                                <div class="promo-card__header">
+                                                    <span class="promo-card__label">
+                                                        <svg class="icon sprite-icons is-tournament"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                                            viewBox="0 0 14 12">
+                                                            <path
+                                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="promo-card__title">Slot Wars</span>
+                                                    <span class="promo-card__label is-info promo-card__label--js">
+                                                        <svg class="icon sprite-icons"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-i"
+                                                            viewBox="0 0 2 12">
+                                                            <path
+                                                                d="M1 2a1 1 0 100-2 1 1 0 000 2zm0 2a1 1 0 00-1 1v6a1 1 0 102 0V5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="promo-card__main"><!---->
+                                                    <div class="promo-card__body">
+                                                        <div class="promo-card__image"><img
+                                                                src="https://d3oqh5ecy4r3n8.cloudfront.net/img/logo-en.dddd0db.png">
+                                                        </div>
+                                                        <div class="bs-c-leaderboard promo-card__leaderboard is-small">
+                                                            <ul><!----> <!---->
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        1.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        MNS****
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        1500 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        48496
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        2.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        bits***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        1000 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        30593
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        3.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        bls****
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        500 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        29159
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        4.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        jimj***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        300 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        27082
+                                                                    </div>
+                                                                </li> <!---->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-card__footer">
+                                                        <div class="countdown-timer promo-card__timer is-inline">
+                                                            <svg class="countdown-timer__icon icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-timer"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 108 0a8 8 0 000 16zm1-7a2 2 0 01-2-2V3a1 1 0 012 0v4h3a1 1 0 110 2z" />
+                                                            </svg>
+                                                            <span class="countdown-timer__label">Ending in</span>
+                                                            <span class="countdown-timer__value"><span
+                                                                    class="countdown-timer__value-block is-day"><span
+                                                                        class="countdown-timer__value-time">5</span>
+                                                                    d
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">09</span>
+                                                                    :
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">36</span>
+                                                                    :
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">36</span>
+
+                                                                </span></span>
+                                                        </div>
+                                                    </div> <a href="" class="promo-card__click-area">
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="promo-card is-back bs-c-tournament-card is-slot-wars">
+                                                <div class="promo-card__back-inner">
+                                                    <div class="promo-card__header">
+                                                        <span class="promo-card__label">
+                                                            <svg class="icon sprite-icons is-tournament"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                id="i-icon-tournament" viewBox="0 0 14 12">
+                                                                <path
+                                                                    d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span class="promo-card__title">Slot
+                                                            Wars</span> <span
+                                                            class="promo-card__label is-close promo-card__label-close-js">
+                                                            <svg class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-close"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="promo-card__backyard">
+                                                        <ul class="promo-card__explanation">
+                                                            <li><span>Prize Pool</span> <strong>
+                                                                    €5,000 &amp; 5,000 Free Spins
+                                                                </strong></li>
+                                                            <li><span>Places Paid</span> <strong>150 (1st prize -
+                                                                    €1,500)</strong></li>
+                                                            <li><span>Type</span> <strong>Slot Tournament</strong></li>
+                                                            <li><span>Frequency</span> <strong>Weekly</strong></li>
+                                                            <li><span>Contributing Games</span> <strong>Play any slot
+                                                                    game and earn points</strong></li>
+                                                            <li><a href="#" class="promo-card__bonus-terms">
+                                                                    Terms &amp; Conditions
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="promo-card__bonus-mobile-overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="promo-card-wrapper bs-c-tournament-card is-table-wars locale-en currency-USD"
+                                            style="order: 11;">
+                                            <div class="promo-card is-front bs-c-tournament-card is-table-wars">
+                                                <div class="promo-card__header">
+                                                    <span class="promo-card__label">
+                                                        <svg class="icon sprite-icons is-tournament"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                                            viewBox="0 0 14 12">
+                                                            <path
+                                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="promo-card__title">Table Wars</span>
+                                                    <span class="promo-card__label is-info promo-card__label--js">
+                                                        <svg class="icon sprite-icons"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-i"
+                                                            viewBox="0 0 2 12">
+                                                            <path
+                                                                d="M1 2a1 1 0 100-2 1 1 0 000 2zm0 2a1 1 0 00-1 1v6a1 1 0 102 0V5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="promo-card__main"><!---->
+                                                    <div class="promo-card__body">
+                                                        <div class="promo-card__image"><img
+                                                                src="https://d3oqh5ecy4r3n8.cloudfront.net/img/logo-en.cf10130.png">
+                                                        </div>
+                                                        <div class="bs-c-leaderboard promo-card__leaderboard is-small">
+                                                            <ul><!----> <!---->
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        1.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        wion***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        3000 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        14319
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        2.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        na*****
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        2000 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        4687
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        3.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        barb***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        1000 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        2854
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        4.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        A1***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        750 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        1221
+                                                                    </div>
+                                                                </li> <!---->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-card__footer">
+                                                        <div class="countdown-timer promo-card__timer is-inline">
+                                                            <svg class="countdown-timer__icon icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-timer"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 108 0a8 8 0 000 16zm1-7a2 2 0 01-2-2V3a1 1 0 012 0v4h3a1 1 0 110 2z" />
+                                                            </svg>
+                                                            <span class="countdown-timer__label">Ending in</span>
+                                                            <span class="countdown-timer__value"><span
+                                                                    class="countdown-timer__value-block is-day"><span
+                                                                        class="countdown-timer__value-time">6</span>
+                                                                    d
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">20</span>
+                                                                    :
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">30</span>
+                                                                    :
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">14</span>
+
+                                                                </span></span>
+                                                        </div>
+                                                    </div> <a href="" class="promo-card__click-area">
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="promo-card is-back bs-c-tournament-card is-table-wars">
+                                                <div class="promo-card__back-inner">
+                                                    <div class="promo-card__header">
+                                                        <span class="promo-card__label">
+                                                            <svg class="icon sprite-icons is-tournament"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                id="i-icon-tournament" viewBox="0 0 14 12">
+                                                                <path
+                                                                    d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span class="promo-card__title">Table
+                                                            Wars</span> <span
+                                                            class="promo-card__label is-close promo-card__label-close-js"><svg
+                                                                class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-close"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                                                            </svg></span>
+                                                    </div>
+                                                    <div class="promo-card__backyard">
+                                                        <ul class="promo-card__explanation">
+                                                            <li><span>Prize Pool</span> <strong>
+                                                                    €10,000 Cash
+                                                                </strong></li>
+                                                            <li><span>Places Paid</span> <strong>40 (1st prize -
+                                                                    €3,000)</strong></li>
+                                                            <li><span>Type</span> <strong>Table Games
+                                                                    Tournament</strong></li>
+                                                            <li><span>Frequency</span> <strong>Weekly</strong></li>
+                                                            <li><span>Contributing Games</span> <strong>Play any table
+                                                                    games and earn points</strong></li>
+                                                            <li><a href="#" class="promo-card__bonus-terms">
+                                                                    Terms &amp; Conditions
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="promo-card__bonus-mobile-overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="promo-card-wrapper bs-c-tournament-card is-welcome-freeroll locale-en currency-USD"
+                                            style="order: 12;">
+                                            <div class="promo-card is-front bs-c-tournament-card is-welcome-freeroll">
+                                                <div class="promo-card__header">
+                                                    <span class="promo-card__label">
+                                                        <svg class="icon sprite-icons is-tournament"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-tournament"
+                                                            viewBox="0 0 14 12">
+                                                            <path
+                                                                d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="promo-card__title">Welcome
+                                                        Freeroll</span>
+                                                    <span class="promo-card__label is-info promo-card__label--js">
+                                                        <svg class="icon sprite-icons"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-i"
+                                                            viewBox="0 0 2 12">
+                                                            <path
+                                                                d="M1 2a1 1 0 100-2 1 1 0 000 2zm0 2a1 1 0 00-1 1v6a1 1 0 102 0V5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="promo-card__main"><!---->
+                                                    <div class="promo-card__body">
+                                                        <div class="promo-card__image"><img
+                                                                src="https://d3oqh5ecy4r3n8.cloudfront.net/img/logo-en.2608319.png">
+                                                        </div>
+                                                        <div class="bs-c-leaderboard promo-card__leaderboard is-small">
+                                                            <ul><!----> <!---->
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        1.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        maka***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        200 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        2408
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        2.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        lo*****
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        100 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        1980
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        3.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        Le***
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        60 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        1940
+                                                                    </div>
+                                                                </li>
+                                                                <li class="bs-c-leaderboard__row">
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        4.
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column">
+                                                                        Mre****
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-prize">
+                                                                        40 EUR
+                                                                    </div>
+                                                                    <div class="bs-c-leaderboard__column is-points">
+                                                                        1855
+                                                                    </div>
+                                                                </li> <!---->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-card__footer">
+                                                        <div class="countdown-timer promo-card__timer is-inline">
+                                                            <svg class="countdown-timer__icon icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-timer"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 108 0a8 8 0 000 16zm1-7a2 2 0 01-2-2V3a1 1 0 012 0v4h3a1 1 0 110 2z" />
+                                                            </svg>
+                                                            <span class="countdown-timer__label">Ending in</span>
+                                                            <span class="countdown-timer__value"><span
+                                                                    class="countdown-timer__value-block is-day"><span
+                                                                        class="countdown-timer__value-time">3</span>
+                                                                    d
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">19</span>
+                                                                    :
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">26</span>
+                                                                    :
+                                                                </span> <span class="countdown-timer__value-block"><span
+                                                                        class="countdown-timer__value-time">25</span>
+
+                                                                </span></span>
+                                                        </div>
+                                                    </div> <a href="" class="promo-card__click-area">
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="promo-card is-back bs-c-tournament-card is-welcome-freeroll">
+                                                <div class="promo-card__back-inner">
+                                                    <div class="promo-card__header">
+                                                        <span class="promo-card__label">
+                                                            <svg class="icon sprite-icons is-tournament"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                id="i-icon-tournament" viewBox="0 0 14 12">
+                                                                <path
+                                                                    d="M3 0a.5.5 0 100 1v1.187A1.623 1.623 0 002.25 2C1.29 2 .5 2.79.5 3.75c0 .676.44 1.201.963 1.632.522.43 1.176.793 1.822 1.1a18.8 18.8 0 001.584.658C5.476 7.963 6 8.5 6 8.5h2s.525-.537 1.132-1.36c.457-.168 1.01-.385 1.584-.658.646-.307 1.3-.67 1.822-1.1s.963-.956.963-1.632c0-.96-.79-1.75-1.75-1.75-.283 0-.53.074-.75.187V1a.5.5 0 100-1zm-.75 3c.358 0 .666.314.908.745l.01.022c.167.669.44 1.316.759 1.906-.072-.033-.14-.059-.212-.093-.604-.287-1.2-.627-1.615-.97-.416-.342-.6-.66-.6-.86 0-.42.33-.75.75-.75zm9.5 0c.42 0 .75.33.75.75 0 .2-.184.518-.6.86s-1.011.683-1.615.97c-.072.034-.14.06-.212.093.318-.59.592-1.237.758-1.906l.01-.022c.243-.43.55-.745.909-.745zM5.5 9.5a1 1 0 00-1 1v.5a.499.499 0 100 1h5a.499.499 0 100-1v-.5a1 1 0 00-1-1z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span class="promo-card__title">Welcome
+                                                            Freeroll</span> <span
+                                                            class="promo-card__label is-close promo-card__label-close-js"><svg
+                                                                class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-close"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                                                            </svg></span>
+                                                    </div>
+                                                    <div class="promo-card__backyard">
+                                                        <ul class="promo-card__explanation">
+                                                            <li><span>Prize Pool</span> <strong>
+                                                                    €1,000 Cash
+                                                                </strong></li>
+                                                            <li><span>Places Paid</span> <strong>200 (1st prize -
+                                                                    €200)</strong></li>
+                                                            <li><span>Type</span> <strong>Free Exclusive
+                                                                    Tournament</strong></li>
+                                                            <li><span>Frequency</span> <strong>First week only</strong>
+                                                            </li>
+                                                            <li><span>Contributing Games</span> <strong>All Games -
+                                                                    bonus &amp; real money bets</strong></li>
+                                                            <li><a href="#" class="promo-card__bonus-terms">
+                                                                    Terms &amp; Conditions
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="promo-card__bonus-mobile-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="promotions-section__title-animation" style="display: none;"></div>
+                                    <div class="promotions-section__skeleton-wrapper" style="display: none;">
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promotions-section">
+                                <div class="promotions-section__title-wrapper">
+                                    <h3 class="promotions-section__title">
+                                        Upcoming Bonuses
+                                    </h3>
+                                </div> <!---->
+                                <div class="promotions-section-wrapper">
+                                    <div class="bs-c-swiper promotions-section__swiper-wrapper scroll-enabled" style="">
+                                        <div class="promo-card-wrapper is-upcoming-bonus locale-en currency-USD"
+                                            style="order: 12;">
+                                            <div class="promo-card is-front is-upcoming-bonus">
+                                                <div class="promo-card__header"><span class="promo-card__label"><svg
+                                                            class="icon sprite-icons is-bonus"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus"
+                                                            viewBox="0 0 12 12">
+                                                            <path
+                                                                d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                                        </svg></span> <span class="promo-card__title">50% Monday Reload
+                                                        Bonus</span> <span
+                                                        class="promo-card__label is-info promo-card__label--js"><svg
+                                                            class="icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                                                            id="i-icon-i" viewBox="0 0 2 12">
+                                                            <path
+                                                                d="M1 2a1 1 0 100-2 1 1 0 000 2zm0 2a1 1 0 00-1 1v6a1 1 0 102 0V5a1 1 0 00-1-1z" />
+                                                        </svg></span></div>
+                                                <div class="promo-card__main">
+                                                    <div class="promo-card__body">
+                                                        <span class="promo-card__label-lock">
+                                                            <svg class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-lock"
+                                                                viewBox="0 0 16 21">
+                                                                <path
+                                                                    d="M8 0C4.676 0 2 2.676 2 6v1C.9 7 0 7.9 0 9v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2V6c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v1H4V6c0-2.276 1.724-4 4-4zm0 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="promo-card__footer">
+                                                        <div class="promo-card__timer restrictions-text">
+                                                            <svg class="countdown-timer__icon icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-timer"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 108 0a8 8 0 000 16zm1-7a2 2 0 01-2-2V3a1 1 0 012 0v4h3a1 1 0 110 2z" />
+                                                            </svg>
+                                                            Available after 4th deposit
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="promo-card is-back is-upcoming-bonus">
+                                                <div class="promo-card__back-inner">
+                                                    <div class="promo-card__header"><span class="promo-card__label"><svg
+                                                                class="icon sprite-icons is-bonus"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-bonus"
+                                                                viewBox="0 0 12 12">
+                                                                <path
+                                                                    d="M4.2 0c-.987 0-1.8.813-1.8 1.8 0 .211.044.411.113.6H0v2.4h.6v5.4c0 .66.54 1.2 1.2 1.2h3.6V4.8h1.2v6.6h3.6c.66 0 1.2-.54 1.2-1.2V4.8h.6V2.4H9.487c.069-.189.113-.389.113-.6C9.6.813 8.787 0 7.8 0c-.461 0-.88.182-1.2.472V.46l-.07.07-.53.53-.53-.53L5.4.46v.013A1.785 1.785 0 004.2 0zm0 1.2c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6zm3.6 0c.338 0 .6.262.6.6s-.262.6-.6.6-.6-.262-.6-.6.262-.6.6-.6z" />
+                                                            </svg></span> <span class="promo-card__title">50% Monday
+                                                            Reload Bonus</span> <span
+                                                            class="promo-card__label is-close promo-card__label-close-js"><svg
+                                                                class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-close"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                                                            </svg></span></div>
+                                                    <div class="promo-card__backyard">
+                                                        <ul class="promo-card__explanation">
+                                                            <li><strong class="promo-card__explanation-intro">50% up to
+                                                                    $300 </strong></li>
+                                                            <li><span>Wager Requirements</span><strong>x40
+                                                                    Bonus</strong></li>
+                                                            <li><span>Max Bet per Game Round</span><strong>5
+                                                                    USD</strong></li>
+                                                            <li><span>Bonuses</span><strong>One reward per
+                                                                    player</strong></li> <!---->
+                                                            <li><a href="" class="promo-card__bonus-terms">
+                                                                    Bonus Terms &amp; Conditions
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="promo-card__bonus-mobile-overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="promo-card-wrapper is-upcoming-bonus locale-en currency-USD"
+                                            style="order: 12;">
+                                            <div class="promo-card is-front is-upcoming-bonus">
+                                                <div class="promo-card__header"><span class="promo-card__label">
+                                                        <svg class="icon sprite-icons is-free-spins"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-free-spins"
+                                                            viewBox="0 0 12 12">
+                                                            <path
+                                                                d="M6 0a5.973 5.973 0 00-4.556 2.11l-.42-.42A.6.6 0 000 2.116v1.953a.6.6 0 00.6.6h1.953a.6.6 0 00.425-1.024l-.583-.584a4.64 4.64 0 016.904-.359 4.672 4.672 0 011.329 2.701c.043.329.307.598.638.598h.134c.331 0 .603-.27.57-.6A6.008 6.008 0 006 0zM.6 6c-.331 0-.603.27-.57.6A6.008 6.008 0 006 12a5.972 5.972 0 004.556-2.11l.42.42A.6.6 0 0012 9.884V7.932a.6.6 0 00-.6-.6H9.447a.6.6 0 00-.425 1.024l.583.584a4.64 4.64 0 01-6.903.358 4.673 4.673 0 01-1.33-2.7C1.33 6.269 1.065 6 .734 6z" />
+                                                        </svg>
+                                                    </span> <span class="promo-card__title">Wednesday Free
+                                                        Spins</span> <span
+                                                        class="promo-card__label is-info promo-card__label--js">
+                                                        <svg class="icon sprite-icons"
+                                                            xmlns="http://www.w3.org/2000/svg" id="i-icon-i"
+                                                            viewBox="0 0 2 12">
+                                                            <path
+                                                                d="M1 2a1 1 0 100-2 1 1 0 000 2zm0 2a1 1 0 00-1 1v6a1 1 0 102 0V5a1 1 0 00-1-1z" />
+                                                        </svg>
+                                                    </span></div>
+                                                <div class="promo-card__main">
+                                                    <div class="promo-card__body"><span class="promo-card__label-lock">
+                                                            <svg class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-lock"
+                                                                viewBox="0 0 16 21">
+                                                                <path
+                                                                    d="M8 0C4.676 0 2 2.676 2 6v1C.9 7 0 7.9 0 9v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2V6c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v1H4V6c0-2.276 1.724-4 4-4zm0 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="promo-card__footer">
+                                                        <div class="promo-card__timer restrictions-text"><svg
+                                                                class="countdown-timer__icon icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-timer"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 108 0a8 8 0 000 16zm1-7a2 2 0 01-2-2V3a1 1 0 012 0v4h3a1 1 0 110 2z" />
+                                                            </svg>
+                                                            Available after 4th deposit
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="promo-card is-back is-upcoming-bonus">
+                                                <div class="promo-card__back-inner">
+                                                    <div class="promo-card__header"><span class="promo-card__label">
+                                                            <svg class="icon sprite-icons is-free-spins"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                id="i-icon-free-spins" viewBox="0 0 12 12">
+                                                                <path
+                                                                    d="M6 0a5.973 5.973 0 00-4.556 2.11l-.42-.42A.6.6 0 000 2.116v1.953a.6.6 0 00.6.6h1.953a.6.6 0 00.425-1.024l-.583-.584a4.64 4.64 0 016.904-.359 4.672 4.672 0 011.329 2.701c.043.329.307.598.638.598h.134c.331 0 .603-.27.57-.6A6.008 6.008 0 006 0zM.6 6c-.331 0-.603.27-.57.6A6.008 6.008 0 006 12a5.972 5.972 0 004.556-2.11l.42.42A.6.6 0 0012 9.884V7.932a.6.6 0 00-.6-.6H9.447a.6.6 0 00-.425 1.024l.583.584a4.64 4.64 0 01-6.903.358 4.673 4.673 0 01-1.33-2.7C1.33 6.269 1.065 6 .734 6z" />
+                                                            </svg>
+                                                        </span> <span class="promo-card__title">Wednesday Free
+                                                            Spins</span> <span
+                                                            class="promo-card__label is-close promo-card__label-close-js"><svg
+                                                                class="icon sprite-icons"
+                                                                xmlns="http://www.w3.org/2000/svg" id="i-icon-close"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M2.778 1.636A1 1 0 101.364 3.05L6.314 8l-4.95 4.95a1 1 0 101.414 1.414l4.95-4.95 4.95 4.95a1 1 0 001.414-1.415L9.142 8l4.95-4.95a1 1 0 00-1.414-1.413l-4.95 4.95z" />
+                                                            </svg></span></div>
+                                                    <div class="promo-card__backyard">
+                                                        <ul class="promo-card__explanation">
+                                                            <li><span>Overview</span>
+                                                                <div class="bs-c-bonus-info-list__item-text-right">
+                                                                    <div class="bs-c-bonus-info-list__item-text is-400">
+                                                                        <em>Deposit on Wednesday -
+                                                                            Get next day</em>
+                                                                    </div>
+                                                                    <div class="bs-c-bonus-info-list__item-text">
+                                                                        <strong>$30 - 20 Free
+                                                                            Spins</strong>
+                                                                    </div>
+                                                                    <div class="bs-c-bonus-info-list__item-text">
+                                                                        <strong>$80 - 80 Free
+                                                                            Spins</strong>
+                                                                    </div>
+                                                                    <div class="bs-c-bonus-info-list__item-text">
+                                                                        <strong>$160 - 200 Free
+                                                                            Spins</strong>
+                                                                    </div>
+                                                                </div>
+                                                            </li> <!---->
+                                                            <li><a href="" class="promo-card__bonus-terms">
+                                                                    Bonus Terms &amp; Conditions
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="promo-card__bonus-mobile-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="promotions-section__title-animation" style="display: none;"></div>
+                                    <div class="promotions-section__skeleton-wrapper" style="display: none;">
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                        <div class="c-promo-skeleton-card promo-card-wrapper">
+                                            <div class="c-promo-skeleton-animation"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="c-site-description">
+                                <div class="c-site-description__section">
+                                    <h2>
+                                        Promotions
+                                    </h2>
+                                    <p><span>Everyone loves a bonus, and that’s why we hand out bonuses as if we were
+                                            running for president. But as
+                                            fun and interesting as the presidency may be, we’re all about other forms of
+                                            entertainment.</span> <a>
+                                            Read more
+                                        </a></p> <!---->
+                                </div> <!---->
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div>
+                <footer id="index-footer" class="footer">
+                    <div class="footer__inner">
+                        <div class="footer-social-icons-wrapper">
+                            <ul class="social-icons">
+                                <li class="social-icons__item">
+                                    <a href="https://t.me/#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-telegram"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-facebook"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-twitter"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank"
+                                        class="social-icons__icon is-instagram"></a>
+                                </li>
+                                <li class="social-icons__item">
+                                    <a href="#" rel="nofollow" target="_blank" class="social-icons__icon is-vimeo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-images__wrap">
+                        <div class="footer-images">
+                            <div class="footer-providers-slider">
+                                <div data-v-8364276a class="bs-c-footer-swiper__wrapper">
+                                    <button data-v-8364276a="" disabled="disabled"
+                                        class="c-button c-swiper-navigation__arrow bs-c-footer-swiper-button bs-c-footer-swiper-button-prev has-icon color-light-purple size-m">
+                                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                                            id="i-arrow-left" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.293 15.707a1 1 0 001.414-1.414L3.414 9H15a1 1 0 100-2H3.414l5.293-5.293A1 1 0 007.293.293l-7 7a.997.997 0 000 1.416m7 6.998l-7-7z" />
+                                        </svg>
+                                    </button>
+                                    <div class="bs-c-swiper bs-c-footer-swiper swiper-wrapper">
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 78px;">
+                                            <img src="/images/img/visa-img.svg" alt="visa">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 40px;">
+                                            <img src="/images/img/mastercard-img.svg" alt="mastercard">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 79px;">
+                                            <img src="/images/img/btc_accepted-img.svg" alt="btc_accepted">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 40px;">
+                                            <img src="/images/img/maestro-img.svg" alt="maestro">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 70px;">
+                                            <img src="/images/img/scrill-img.svg" alt="scrill">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/neteller-img.svg" alt="neteller">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/paysafecard-img.svg" alt="paysafecard">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 90px;">
+                                            <img src="/images/img/zimpler-img.svg" alt="zimpler">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 52px;">
+                                            <img src="/images/img/idebit-img.svg" alt="idebit">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/instadebit-img.svg" alt="instadebit">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 94px;">
+                                            <img src="/images/img/webmoney-img.svg" alt="webmoney">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 65px;">
+                                            <img src="/images/img/netent-img.svg" alt="netent">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 64px;">
+                                            <img src="/images/img/betsoft-img.svg" alt="betsoft">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 78px;">
+                                            <img src="/images/img/amatic-img.svg" alt="amatic">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 127px;">
+                                            <img src="/images/img/bgaming-img.svg" alt="bgaming">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 92px;">
+                                            <img src="/images/img/softswiss_casino-img.svg" alt="softswiss_casino">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/belatra-img.svg" alt="belatra">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/mascot-img.svg" alt="mascot">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 34px;">
+                                            <img src="/images/img/dreamtech-img.svg" alt="dreamtech">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 59px;">
+                                            <img src="/images/img/ezugi-img.svg" alt="ezugi">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 103px;">
+                                            <img src="/images/img/ask_gamblers-img.svg" alt="ask_gamblers">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 124px;">
+                                            <img src="/images/img/lcb-casino-of-the-month-img.svg"
+                                                alt="lcb-casino-of-the-month">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 128px;">
+                                            <img src="/images/img/bck-badge-img.svg" alt="bck-badge">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 39px;">
+                                            <img src="/images/img/rng-img.svg" alt="rng">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 55px;">
+                                            <img src="/images/img/gpwa-img.svg" alt="gpwa">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 24px;">
+                                            <img src="/images/img/itech-img.svg" alt="itech">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 22px;">
+                                            <img src="/images/img/ssl-img.svg" alt="ssl">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 61px;">
+                                            <img src="/images/img/interac-img.svg" alt="interac">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 46px;">
+                                            <img src="/images/img/interac2-img.svg" alt="intinterac2">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 73px;">
+                                            <img src="/images/img/coinspaid-img.svg" alt="coinspaid">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 68px;">
+                                            <img src="/images/img/casinoGuru-img.svg" alt="casinoGuru">
+                                        </span>
+                                        <span class="bs-c-footer-swiper__item swiper-slide" style="min-width: 140px;">
+                                            <img src="/images/img/casinomeister-img.svg" alt="casinomeister">
+                                        </span>
+                                    </div>
+                                    <button data-v-8364276a="" disabled="disabled"
+                                        class="c-button c-swiper-navigation__arrow bs-c-footer-swiper-button bs-c-footer-swiper-button-next has-icon color-light-purple size-m"><!---->
+                                        <svg class="c-button__icon icon sprite-icons" xmlns="http://www.w3.org/2000/svg"
+                                            id="i-arrow-right" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8.707.293a1 1 0 00-1.414 1.414L12.586 7H1a1 1 0 100 2h11.586l-5.293 5.293a1 1 0 101.414 1.414l7-7 .007-.006A.997.997 0 0016 8.003V8v-.003a.996.996 0 00-.286-.698l-.008-.007m-6.999-7l7 7z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-copyright">
+                            <div class="footer-copyright__top">
+                                <p class="footer-copyright__text">
+                                    Copyright &#169; 2014-2023 BitStarz. All Rights Reserved.
+                                </p>
+                                <ul class="footer-copyright__nav">
+                                    <li>
+                                        <a href="#">
+                                            Affiliate program
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/terms.html" class="faq__accordion-body-title" data-number-name="11">
+                                            Terms &amp; Conditions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/bonus-terms-and-conditions.html" class="faq__accordion-body-title"
+                                            data-number-name="11">
+                                            Bonus Terms &amp; Conditions
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="footer-copyright__icons">
+                                    <li>
+                                        <img src="/images/img/18years.png" alt="18">
+                                    </li>
+                                    <li>
+                                        <img src="/images/img/gamecare.png" alt="gamecare">
+                                    </li>
+                                    <li>
+                                        <img src="/images/img/ga-footer.png" alt="ga">
+                                    </li>
+                                    <li>
+                                        <div id="apg-seal-container"
+                                            data-apg-seal-id="9687875d-6966-4abf-98e4-e4fefd662e89"
+                                            class="apg-seal-container">
+                                            <div
+                                                style="display: block;position: relative;overflow: hidden;max-width: nullpx;min-width: 32px; background-image: url(https://9687875d-6966-4abf-98e4-e4fefd662e89.snippet.antillephone.com/54f396e0-b046-49b1-9cb3-0c69281d7ea9-beacon.png);">
+                                                <a target="_blank" rel="nonoopener"
+                                                    href="https://validator.antillephone.com/validate?domain=www.bitstarz.com&amp;seal_id=2914729f2a01e3a1231b63173c6d58c0104833cf64d6731d18c44998d15f31d32a048513a5bf34bdd14d95f43e5ef2d0&amp;stamp=7ccb20a6853d65d7195728148e321143">
+                                                    <img alt="" style="width: 100%; height: auto"
+                                                        src="/images/img/basic-large-valid-seal.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="footer-copyright__disclaimer">
+                                BitStarz was the first multi-currency online casino to offer play in major international
+                                currencies such as Dollars and
+                                Euros as well as Bitcoin and other Cryptocurrencies. BitStarz is owned and operated by
+                                Dama N.V. that is incorporated
+                                under the laws of Curacao with company registration number 152125 and having its
+                                registered address at Scharlooweg 39,
+                                Willemstad, Curaçao. Dama N.V. is operating under E-gaming license No. 8048/JAZ2020-13
+                                issued by Antillephone N.V.
+                                authorized by the government of Curacao. Friolion Ltd. is a company incorporated under
+                                the laws of Cyprus with company
+                                registration number HE 419102 and having its registered address at Leandrou, 12A 3086,
+                                Limassol, Cyprus. Friolion
+                                Limited is a facilitating company within DAMA group. DAMA group is operating under
+                                E-gaming licenses of
+                                Curacao(8048/JAZ2020-13), Estonia (HKL000255). All payments with Paysafe are made via
+                                Dama N.V. It is the player's sole
+                                responsibility to inquire about the existing laws and regulations of the given
+                                jurisdiction for online gambling. Contact: <a
+                                    href="mailto:support@bitstarz.com">support@bitstarz.com.</a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/main.js"></script>
+
+</html>
